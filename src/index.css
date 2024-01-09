@@ -1,11 +1,17 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --darkgreen: #002400;
+  --lightgreen: #91a762;
+  --beige: #ede6d8;
+  --gold: #caa869;
+  --brown: #654221;
+  --red: #8b0101;
+
+  font-family: 'LinuxBiolinum', 'GentiumBookPlus', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--darkgreen);
+  color: var(--beige);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +19,57 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Gentium Book Plus */
+@font-face {
+  font-family: 'GentiumBookPlus';
+  src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Regular.ttf')
+    format('truetype');
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@font-face {
+  font-family: 'GentiumBookPlus';
+  src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+  font-family: 'GentiumBookPlus';
+  src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Italic.ttf')
+    format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'GentiumBookPlus';
+  src: url('/fonts/GentiumBookPlus/GentiumBookPlus-BoldItalic.ttf')
+    format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Linux Biolinum */
+@font-face {
+  font-family: 'LinuxBiolinum';
+  src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LinuxBiolinum';
+  src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'LinuxBiolinum';
+  src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Italic.otf') format('opentype');
+  font-style: italic;
+  font-weight: normal;
 }
