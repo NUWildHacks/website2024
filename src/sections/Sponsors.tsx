@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import SponsorBox from './SponsorBox';
-import Sponsor from './Sponsor';
+import SponsorBox from '../components/SponsorBox';
+import Sponsor from '../components/Sponsor';
 
 const Container = styled.div`
   min-height: 1000px;
@@ -15,24 +15,24 @@ export default function Sponsors() {
         alt="Northwestern Computer Science"
         href="https://www.mccormick.northwestern.edu/computer-science/"
       />
-      <Sponsor 
+      <Sponsor
         src="/deloitte.png"
         alt="Deloitte"
         href="https://www2.deloitte.com/us/en.html"
       />
-      <Sponsor 
+      <Sponsor
         src="/spiderrock.png"
         alt="SpiderRock"
         href="https://www.spiderrock.net/"
       />
       <Sponsor src="/poatek.png" alt="POATEK" href="https://poatek.com/" />
-      <Sponsor 
+      <Sponsor
         src="/thegarage.jpeg"
         alt="The Garage"
         href="https://thegarage.northwestern.edu/"
         // h={128}
       />
-      <Sponsor 
+      <Sponsor
         src="/github.png"
         alt="GitHub"
         href="https://github.com/"
@@ -41,4 +41,3 @@ export default function Sponsors() {
     </SponsorBox>
   );
 }
-

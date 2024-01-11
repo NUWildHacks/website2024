@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import FAQ from './components/FAQ';
-import Sponsors from './components/Sponsors';
 import Navbar from './components/NavBar';
+import About from './sections/About';
+import FAQ from './sections/FAQ';
+import Sponsors from './sections/Sponsors';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <About />
       <FAQ />
       <Sponsors />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Question from './Question';
+import Question from '../components/Question';
 
 const FAQContainer = styled.div`
   background-color: var(--red);

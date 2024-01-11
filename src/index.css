@@ -24,6 +24,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--beige);
+}
+
 /* Gentium Book Plus */
 @font-face {
   font-family: 'GentiumBookPlus';
