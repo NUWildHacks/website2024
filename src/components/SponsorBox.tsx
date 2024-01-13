@@ -1,26 +1,30 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 16px 0;
+  // margin: 72px 16px;
 `;
 
 const Title = styled.h3`
-  text-align: center;
-  font-size: 16px;
-  color: #8B0101;
+  text-align: left;
+  padding-top: 0px;
+  padding-left: 10px;
+  // padding-right: 10px;
+  // padding-bottom: 10px;
+  font-size: 32px;
+  color: var(--brown);
 `;
 
 const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 48px;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  box-shadow: 0 0 16px #ffffff;
-  padding: 16px;
+  background-color: var(--beige);
+  padding: 32px;
   border-radius: 12px;
 `;
+
 
 interface ISponsorBox {
   title: string;
@@ -30,7 +34,7 @@ interface ISponsorBox {
 export const SponsorBox: React.FC<ISponsorBox> = ({ title, children }) => {
   return (
     <Container>
-      <Title>— {title} —</Title>
+      <Title>{title}</Title>
       <Content>{children}</Content>
     </Container>
   );
