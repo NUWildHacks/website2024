@@ -2,28 +2,35 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import styled from 'styled-components';
-import { mobile } from '../styles';
+import { faq_font_size, mobile } from '../styles';
+import { Book, Book2 } from 'tabler-icons-react';
 
-const Container = styled.div`
+const Container = styled.div<{ open: boolean }>`
   margin: 16px 0;
+  background: ${(props) => (props.open ? "white" : "")};
+  border-radius: 6px;
+  padding: 3px;
 `;
 
 const Heading = styled.button<{ open: boolean }>`
   display: flex;
   align-items: center;
-  gap: 16px;
-  color: ${(props) => (props.open ? '#b0d9ff' : '#ffffff')};
+  gap: 12px;
+  color: ${(props) => (props.open ? 'var(--darkgreen)' : 'white')};
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   text-align: left;
+  transition: color 150ms ease-in-out;
+  font-family: "LinuxBiolinum";
 
   svg {
-    width: 16px;
-    height: 16px;
-    transition: transform 250ms;
-    ${(props) => props.open && 'transform: rotate(90deg);'}
+    width: 28px;
+    height: 28px;
+    align-self: flex-start;
+    transition: transform 250ms ease-in-out;
+    ${(props) => props.open && 'transform: rotate(15deg);'}
   }
 
   p {
@@ -35,7 +42,7 @@ const Heading = styled.button<{ open: boolean }>`
       content: '';
       margin-top: 1px;
       height: 4px;
-      background-color: #b0d9ff;
+      background-color: ${(props) => (props.open ? 'var(--lightgreen)' : '#b0d9ff')};
       transform: scaleX(${(props) => (props.open ? 1 : 0)});
       transition: transform 250ms ease-out;
       transform-origin: ${(props) => (props.open ? '0% 50%' : '100% 50%')};
@@ -44,7 +51,7 @@ const Heading = styled.button<{ open: boolean }>`
   }
 
   &:hover {
-    color: #b0d9ff;
+    color: ${(props) => (props.open ? 'var(--lightgreen)' : '#b0d9ff')};
   }
 
   ${mobile} {
@@ -53,21 +60,23 @@ const Heading = styled.button<{ open: boolean }>`
     }
 
     svg {
-      width: 12px;
-      height: 12px;
+      width: 24px;
+      height: 24px;
     }
   }
 `;
 
 const Content = styled.p<{ open: boolean }>`
   margin-left: 32px;
+  font-size: 18px;
+  color: ${(props) => (props.open ? 'black' : 'white')};
 
   ${mobile} {
     margin-left: 28px;
   }
 
   span {
-    color: #d2c7ff;
+    color: var(--lightgreen);
     font-weight: 700;
   }
 `;
@@ -81,9 +90,18 @@ export const Question: React.FC<IQuestion> = ({ q, children }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Container>
+    <Container open={open}>
       <Heading open={open} onClick={() => setOpen(!open)}>
-        <p>{q}</p>
+      {open ? <Book
+        size={96}
+        strokeWidth={1.5}
+        color={'var(--darkgreen)'}
+      /> : <Book2
+        size={96}
+        strokeWidth={1.5}
+        color={'white'}
+      />}
+      <p>{q}</p>
       </Heading>
       {open && <Content open={open}>{children}</Content>}
     </Container>
