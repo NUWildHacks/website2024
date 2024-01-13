@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { mobile } from '../styles';
 
-const Container = styled.a<{h: number}>`
+const Container = styled.a<{ h: number }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,11 +29,11 @@ interface ISponsor {
 }
 
 export const Sponsor: React.FC<ISponsor> = ({ href, src, alt, h }) => {
-    return (
-      <Container href={href} target="_blank" rel="noreferrer" h={h}>
-        <img src={src} alt={alt} />
-      </Container>
-    );
-  }
+  return (
+    <Container href={href} target="_blank" rel="noreferrer" h={h}>
+      <img src={src} alt={alt} />
+    </Container>
+  );
+};
 
 export default Sponsor;

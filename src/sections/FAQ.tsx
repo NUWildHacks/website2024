@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Question from '../components/Question';
 import { mobile } from '../styles';
@@ -38,7 +37,7 @@ const Boundary = styled.div<{ top: boolean }>`
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: ${(props) => (props.top && "rotate(180deg)")};
+  transform: ${(props) => props.top && 'rotate(180deg)'};
 
   svg {
     position: relative;
@@ -51,15 +50,23 @@ const Boundary = styled.div<{ top: boolean }>`
   .shape-fill {
     fill: var(--darkgreen);
   }
-`
+`;
 
-export const FAQ: React.FC = () => {
+export default function FAQ() {
   return (
     <FAQContainer>
       <Boundary top>
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-          </svg>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
       </Boundary>
       <FAQTitle>Frequently Asked Questions</FAQTitle>
       <Category>
@@ -152,17 +159,28 @@ export const FAQ: React.FC = () => {
           involved.
         </Question>
         <Question q="I'm interested in sponsoring WildHacks. Who should I contact?">
-          Send us an email at <span><a href="mailto:wildhacks@northwestern.edu">wildhacks@northwestern.edu</a></span>! We'd be
-          happy to talk.
+          Send us an email at{' '}
+          <span>
+            <a href="mailto:wildhacks@northwestern.edu">
+              wildhacks@northwestern.edu
+            </a>
+          </span>
+          ! We'd be happy to talk.
         </Question>
       </Category>
       <Boundary top={false}>
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-          </svg>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
       </Boundary>
     </FAQContainer>
   );
-};
-
-export default FAQ;
+}

@@ -7,7 +7,7 @@ import { Book, Book2 } from 'tabler-icons-react';
 
 const Container = styled.div<{ open: boolean }>`
   margin: 16px 0;
-  background: ${(props) => (props.open ? "white" : "")};
+  background: ${(props) => (props.open ? 'white' : '')};
   border-radius: 6px;
   padding: 3px;
 `;
@@ -23,7 +23,7 @@ const Heading = styled.button<{ open: boolean }>`
   cursor: pointer;
   text-align: left;
   transition: color 150ms ease-in-out;
-  font-family: "LinuxBiolinum";
+  font-family: 'LinuxBiolinum';
 
   svg {
     width: 28px;
@@ -42,7 +42,8 @@ const Heading = styled.button<{ open: boolean }>`
       content: '';
       margin-top: 1px;
       height: 4px;
-      background-color: ${(props) => (props.open ? 'var(--lightgreen)' : '#b0d9ff')};
+      background-color: ${(props) =>
+        props.open ? 'var(--lightgreen)' : '#b0d9ff'};
       transform: scaleX(${(props) => (props.open ? 1 : 0)});
       transition: transform 250ms ease-out;
       transform-origin: ${(props) => (props.open ? '0% 50%' : '100% 50%')};
@@ -92,16 +93,12 @@ export const Question: React.FC<IQuestion> = ({ q, children }) => {
   return (
     <Container open={open}>
       <Heading open={open} onClick={() => setOpen(!open)}>
-      {open ? <Book
-        size={96}
-        strokeWidth={1.5}
-        color={'var(--darkgreen)'}
-      /> : <Book2
-        size={96}
-        strokeWidth={1.5}
-        color={'white'}
-      />}
-      <p>{q}</p>
+        {open ? (
+          <Book size={96} strokeWidth={1.5} color={'var(--darkgreen)'} />
+        ) : (
+          <Book2 size={96} strokeWidth={1.5} color={'white'} />
+        )}
+        <p>{q}</p>
       </Heading>
       {open && <Content open={open}>{children}</Content>}
     </Container>

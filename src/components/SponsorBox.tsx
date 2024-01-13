@@ -7,7 +7,7 @@ const Container = styled.div`
 const Title = styled.h3`
   text-align: center;
   font-size: 16px;
-  color: #8B0101;
+  color: #8b0101;
 `;
 
 const Content = styled.div`
