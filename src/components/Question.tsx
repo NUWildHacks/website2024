@@ -2,7 +2,7 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import styled from 'styled-components';
-import { faq_font_size, mobile } from '../styles';
+import { mobile } from '../styles';
 import { Book, Book2 } from 'tabler-icons-react';
 
 const Container = styled.div<{ open: boolean }>`
