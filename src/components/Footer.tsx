@@ -1,6 +1,10 @@
-import { instagram, facebook } from '../variables';
+import { instagram, linkedin } from '../variables';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import {
+  faInstagram,
+  faFacebook,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
 const BeigeBook = styled.div`
@@ -127,11 +131,11 @@ export default function Footer() {
         </Left>
         <Right>
           <Socials>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} size="xl" />
+            </a>
             <a href={instagram} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} size="xl" />
-            </a>
-            <a href={facebook} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} size="xl" />
             </a>
           </Socials>
           <a href="mailto:wildhacks@northwestern.edu">
