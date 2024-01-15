@@ -25,7 +25,6 @@ const Content = styled.div`
   border-radius: 12px;
 `;
 
-
 interface ISponsorBox {
   title: string;
   children: React.ReactNode;
