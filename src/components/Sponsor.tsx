@@ -7,7 +7,7 @@ const Container = styled.a<{ h?: number }>`
   justify-content: center;
 
   img {
-    height: ${(props) => props.h || 64}px;
+    height: ${(props) => props.h || 85}px;
     transition: transform 0.2s ease-in-out;
     ${mobile} {
       max-width: 100%;
