@@ -1,10 +1,5 @@
-import styled from 'styled-components';
 import SponsorBox from '../components/SponsorBox';
 import Sponsor from '../components/Sponsor';
-
-const Container = styled.div`
-  min-height: 1000px;
-`;
 
 export default function Sponsors() {
   return (

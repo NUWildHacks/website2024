@@ -31,7 +31,7 @@ const Button = styled.button`
 
   &:hover {
     clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
-    background: var(--brown)
+    background: var(--brown);
   }
 
   a {
