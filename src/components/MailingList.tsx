@@ -1,6 +1,6 @@
 import { useState, useRef, FormEvent, ChangeEvent } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';
 
 const Form = styled.form`
@@ -50,7 +50,7 @@ export default function MailingList() {
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [email, setEmail] = useState('');
-  const [success, setSuccess] = useState('');
+//   const [success, setSuccess] = useState('');
 
   const api = 'https://api.dilanxd.com/wildhacks/subscribe';
   const form = useRef<HTMLFormElement>(null);
