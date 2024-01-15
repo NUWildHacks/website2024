@@ -21,6 +21,17 @@ const Box2 = styled.div`
   border-radius: 10px;
   grid-column: 2;
   grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
 `;
 
 const Box3 = styled.div`
@@ -36,6 +47,17 @@ const Box4 = styled.div`
   margin-bottom: -30px;
   grid-column: 4;
   grid-row: 1 / 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
 `;
 
 const Text = styled.div`
@@ -131,10 +153,20 @@ const Box7 = styled.div`
 export default function About() {
   return (
     <Container>
-      <Box1>box 1</Box1>
-      <Box2>box 2</Box2>
+      <Box1>Box 1</Box1>
+      <Box2>
+        <img
+          src="src/assets/WildhacksGroup.JPG"
+          alt="WildHacks 2023 Group Picture"
+        ></img>
+      </Box2>
       <Box3>box 3</Box3>
-      <Box4>box 4</Box4>
+      <Box4>
+        <img
+          src="src/assets/WildhacksTeamwork.JPG"
+          alt="WildHacks 2023 Team Working Picture"
+        ></img>
+      </Box4>
       <Text>
         <div>
           <div>

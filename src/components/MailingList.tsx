@@ -1,4 +1,6 @@
 import { useState, useRef, FormEvent, ChangeEvent } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';
 
 const Form = styled.form`
@@ -116,6 +118,7 @@ export default function MailingList() {
         value={email}
         required
       ></Input>
+      {/* <FontAwesomeIcon icon={faPaperPlane} /> */}
     </Form>
   );
 }

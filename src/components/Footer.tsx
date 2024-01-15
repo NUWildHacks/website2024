@@ -1,10 +1,6 @@
 import { instagram, linkedin } from '../variables';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faFacebook,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
 const BeigeBook = styled.div`
