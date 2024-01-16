@@ -17,6 +17,7 @@ const NavBarContainer = styled.nav`
 
   ${mobile} {
     padding: 5px;
+    height: 60px;
   }
 `;
 

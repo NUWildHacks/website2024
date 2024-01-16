@@ -8,18 +8,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 `;
 
 function App() {
   return (
-    <Container>
+    <>
       <Navbar />
-      <Landing />
-      <About />
-      <Sponsors />
-      <FAQ />
-      <Footer />
-    </Container>
+      <Container>
+        <Landing />
+        <About />
+        <Sponsors />
+        <FAQ />
+        <Footer />
+      </Container>
+    </>
   );
 }
 
