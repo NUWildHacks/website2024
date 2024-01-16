@@ -9,6 +9,10 @@ import garage from '../assets/thegarage.jpeg';
 import github from '../assets/github.png';
 import styled from 'styled-components';
 
+const Section = styled.div`
+  padding-top: 100px;
+`;
+
 const Container = styled.div`
   background-color: #ede6d8;
   padding: 45px 16px 75px;
@@ -56,7 +60,7 @@ const Wavet = styled.div`
 
 export default function Sponsors() {
   return (
-    <>
+    <Section id="sponsors">
       <Waveb>
         <svg
           data-name="Layer 1"
@@ -116,6 +120,6 @@ export default function Sponsors() {
           ></path>
         </svg>
       </Wavet>
-    </>
+    </Section>
   );
 }

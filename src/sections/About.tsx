@@ -2,7 +2,7 @@ import MailingList from '../components/MailingList';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 55px;
+  padding: 100px 55px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -207,7 +207,7 @@ const Box7 = styled.div`
 
 export default function About() {
   return (
-    <Container>
+    <Container id="about">
       <Box1>
         <img
           src="src/assets/WildhacksClass.JPG"
@@ -227,10 +227,7 @@ export default function About() {
         ></img>
       </Box3>
       <Box4>
-        <img
-          src="src/assets/bokshelf.png"
-          alt="Bookshelf cartoon image"
-        ></img>
+        <img src="src/assets/bokshelf.png" alt="Bookshelf cartoon image"></img>
       </Box4>
       <Text>
         <div>

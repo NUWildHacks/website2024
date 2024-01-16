@@ -127,7 +127,7 @@ const IvyIcon = styled(FaLeaf)<IvyIconProps>`
 
 export const Landing: React.FC = () => {
   return (
-    <Container>
+    <Container id="landing">
       <BookContainer topPosition={70} rightPosition={0}>
         <Bookshelf>
           <Book size={150} width={35} color="#8b0101" />

@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 import icon from '../assets/wildhacks2024-icon.png';
+import { dashboard } from '../variables';
 
 const NavBarContainer = styled.nav`
   background: var(--darkgreen);
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0 40px;
   height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 `;
 
 const Logo = styled.img`
@@ -24,20 +28,12 @@ const NavLink = styled.a`
 const Button = styled.button`
   position: relative;
   color: var(--beige);
-  background: var(--darkgreen);
+  background: var(--brown);
   border: none;
   padding: 10px 20px;
+  margin-left: 20px;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  &:hover {
-    clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
-    background: var(--brown);
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 20px;
-  }
+  text-transform: uppercase;
 `;
 
 const List = styled.ul`
@@ -46,17 +42,28 @@ const List = styled.ul`
   list-style-type: none;
   color: var(--beige);
   margin: 0;
+  text-transform: uppercase;
+
+  & > a {
+    padding-right: 20px;
+  }
 `;
 
 const Navbar: React.FC = () => {
   return (
     <NavBarContainer>
-      <Logo src={icon} alt="WildHacks 2024 Logo" />
+      <NavLink href="#landing">
+        <Logo src={icon} alt="WildHacks 2024 Logo" />
+      </NavLink>
       <List>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
-        <Button>Dashboard</Button>
+        <Button>
+          <a href={dashboard} target="_blank" rel="noopener noreferrer">
+            Dashboard
+          </a>
+        </Button>
       </List>
     </NavBarContainer>
   );

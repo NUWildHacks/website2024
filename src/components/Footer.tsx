@@ -61,7 +61,10 @@ const Left = styled.div`
 
   img {
     width: 60px;
-    padding-right: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    background-color: var(--beige);
+    border-radius: 10px;
   }
 
   p {
