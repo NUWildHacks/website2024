@@ -7,23 +7,23 @@ const NavBarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  height: 50px;
+  height: 80px;
 `;
 
 const Logo = styled.img`
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   margin-left: 10px;
 `;
 
 const NavLink = styled.a`
-  color: white;
+  color: var(--beige);
   font-family: GentiumBookPlus;
 `;
 
 const Button = styled.button`
   position: relative;
-  color: white;
+  color: var(--beige);
   background: var(--darkgreen);
   border: none;
   padding: 10px 20px;
@@ -44,35 +44,19 @@ const List = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  color: white;
+  color: var(--beige);
   margin: 0;
-
-  li {
-    :hover {
-      color: var(--brown);
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--brown);
-    }
-  }
 `;
 
 const Navbar: React.FC = () => {
   return (
     <NavBarContainer>
-      <Logo src={icon} />
+      <Logo src={icon} alt="WildHacks 2024 Logo" />
       <List>
-        <Button>
-          <NavLink href="#about">About</NavLink>
-        </Button>
-        <Button>
-          <NavLink href="#faq">FAQ</NavLink>
-        </Button>
-        <Button>
-          <NavLink href="#sponsors">Sponsors</NavLink>
-        </Button>
+        <NavLink href="#about">About</NavLink>
+        <NavLink href="#sponsors">Sponsors</NavLink>
+        <NavLink href="#faq">FAQ</NavLink>
+        <Button>Dashboard</Button>
       </List>
     </NavBarContainer>
   );

@@ -6,7 +6,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(200px, 200px);
 `;
 
 const Box1 = styled.div`
@@ -14,6 +14,17 @@ const Box1 = styled.div`
   border-radius: 10px;
   grid-column: 1;
   grid-row: 1 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 95%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 `;
 
 const Box2 = styled.div`
@@ -27,9 +38,9 @@ const Box2 = styled.div`
   justify-content: center;
 
   img {
+    height: 90%;
     width: 90%;
-    height: auto;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 10px;
   }
 `;
@@ -39,6 +50,17 @@ const Box3 = styled.div`
   border-radius: 10px;
   grid-column: 3;
   grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 `;
 
 const Box4 = styled.div`
@@ -53,9 +75,9 @@ const Box4 = styled.div`
   justify-content: center;
 
   img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
+    height: 95%;
+    width: 90%;
+    object-fit: cover;
     border-radius: 10px;
   }
 `;
@@ -103,6 +125,17 @@ const Box5 = styled.div`
   border-radius: 10px;
   grid-column: 1;
   grid-row: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 `;
 
 const Mail = styled.div`
@@ -140,6 +173,17 @@ const Box6 = styled.div`
   border-radius: 10px;
   grid-column: 3;
   grid-row: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 `;
 
 const Box7 = styled.div`
@@ -148,23 +192,44 @@ const Box7 = styled.div`
   margin-top: 30px;
   grid-column: 4;
   grid-row: 3 / 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 93%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 `;
 
 export default function About() {
   return (
     <Container>
-      <Box1>Box 1</Box1>
+      <Box1>
+        <img
+          src="src/assets/WildhacksClass.JPG"
+          alt="WildHacks 2023 Open Classes Picture"
+        ></img>
+      </Box1>
       <Box2>
         <img
           src="src/assets/WildhacksGroup.JPG"
           alt="WildHacks 2023 Group Picture"
         ></img>
       </Box2>
-      <Box3>box 3</Box3>
+      <Box3>
+        <img
+          src="src/assets/WildhacksOutside.JPG"
+          alt="WildHacks 2023 Team Outside Working Picture"
+        ></img>
+      </Box3>
       <Box4>
         <img
-          src="src/assets/WildhacksTeamwork.JPG"
-          alt="WildHacks 2023 Team Working Picture"
+          src="src/assets/bokshelf.png"
+          alt="Bookshelf cartoon image"
         ></img>
       </Box4>
       <Text>
@@ -183,7 +248,12 @@ export default function About() {
           </div>
         </div>
       </Text>
-      <Box5>box 5</Box5>
+      <Box5>
+        <img
+          src="src/assets/WildhacksFood.JPG"
+          alt="WildHacks 2023 Food Catering Picture"
+        ></img>
+      </Box5>
       <Mail>
         <div>
           <div>
@@ -192,8 +262,18 @@ export default function About() {
           </div>
         </div>
       </Mail>
-      <Box6>box 6</Box6>
-      <Box7>box 7</Box7>
+      <Box6>
+        <img
+          src="src/assets/WildhacksTeamPose.JPG"
+          alt="WildHacks 2023 Executive Team Picture"
+        ></img>
+      </Box6>
+      <Box7>
+        <img
+          src="src/assets/WildhacksTeamwork.JPG"
+          alt="WildHacks 2023 Team Working Picture"
+        ></img>
+      </Box7>
     </Container>
   );
 }
