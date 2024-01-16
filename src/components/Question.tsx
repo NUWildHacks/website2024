@@ -6,7 +6,7 @@ import { mobile } from '../styles';
 import { Book, Book2 } from 'tabler-icons-react';
 
 const Container = styled.div<{ open: boolean }>`
-  margin: 16px 0;
+  margin-top: 16px;
   background: ${(props) => (props.open ? 'white' : '')};
   border-radius: 6px;
   padding: 3px;
@@ -61,7 +61,7 @@ const Heading = styled.button<{ open: boolean }>`
     }
 
     svg {
-      width: 24px;
+      min-width: 24px;
       height: 24px;
     }
   }
@@ -77,6 +77,11 @@ const Content = styled.p<{ open: boolean }>`
   }
 
   span {
+    color: var(--lightgreen);
+    font-weight: 700;
+  }
+  
+  a {
     color: var(--lightgreen);
     font-weight: 700;
   }

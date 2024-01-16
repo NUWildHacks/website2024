@@ -2,6 +2,7 @@ import { instagram, facebook } from '../variables';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
+import { mobile } from '../styles';
 
 const BeigeBook = styled.div`
   position: relative;
@@ -53,6 +54,10 @@ const Container = styled.div`
   min-height: 60px;
   padding: 0 50px;
   background-color: var(--brown);
+
+  ${mobile} {
+    flex-direction: column
+  }
 `;
 
 const Left = styled.div`
@@ -80,6 +85,9 @@ const Right = styled.div`
 const Socials = styled.div`
   a {
     float: right;
+    ${mobile} {
+      float: left;
+    }
     background-color: var(--beige);
     color: var(--brown);
     border-radius: 20%;
