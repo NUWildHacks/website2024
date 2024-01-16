@@ -50,7 +50,7 @@ export default function MailingList() {
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [email, setEmail] = useState('');
-//   const [success, setSuccess] = useState('');
+  //   const [success, setSuccess] = useState('');
 
   const api = 'https://api.dilanxd.com/wildhacks/subscribe';
   const form = useRef<HTMLFormElement>(null);
