@@ -10,6 +10,11 @@ const Container = styled.div<{ open: boolean }>`
   background: ${(props) => (props.open ? 'var(--beige)' : '')};
   border-radius: 6px;
   padding: 3px;
+  max-width: 95%;
+
+  ${mobile} {
+    max-width: 90%;
+  }
 `;
 
 const Heading = styled.button<{ open: boolean }>`

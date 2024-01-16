@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import wood from '../assets/wood.png';
 import { darken } from 'polished';
 import { FaLeaf } from 'react-icons/fa';
+import { mobile } from '../styles';
 
 interface BookProps {
   size: number;
@@ -94,6 +95,12 @@ const BookContainer = styled.div<BookContainerProps>`
   right: ${({ rightPosition }) => rightPosition}px;
   left: ${({ leftPosition }) => leftPosition}px;
   margin-left: 0px;
+
+  ${mobile} {
+    &.hide {
+      display: none;
+    }
+  }
 `;
 
 const Book = styled.div<BookProps>`
@@ -128,7 +135,7 @@ const IvyIcon = styled(FaLeaf)<IvyIconProps>`
 export const Landing: React.FC = () => {
   return (
     <Container id="landing">
-      <BookContainer topPosition={70} rightPosition={0}>
+      <BookContainer topPosition={70} rightPosition={0} className="hide">
         <Bookshelf>
           <Book size={150} width={35} color="#8b0101" />
           <Book size={130} width={35} color="#deb887" />
@@ -138,7 +145,7 @@ export const Landing: React.FC = () => {
         <Shelf width={210} rightPosition={-10}></Shelf>
       </BookContainer>
 
-      <BookContainer topPosition={480} leftPosition={0}>
+      <BookContainer topPosition={480} leftPosition={0} className="hide">
         <Bookshelf>
           <Book size={150} width={35} color="#8b0101" />
           <Book size={130} width={35} color="#deb887" />

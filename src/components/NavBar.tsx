@@ -22,7 +22,7 @@ const Logo = styled.img`
 
 const NavLink = styled.a`
   color: var(--beige);
-  font-family: GentiumBookPlus;
+  font-family: 'GentiumBookPlus';
 `;
 
 const Button = styled.button`

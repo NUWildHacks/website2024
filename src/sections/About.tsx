@@ -1,4 +1,5 @@
 import MailingList from '../components/MailingList';
+import { mobile } from '../styles';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -7,6 +8,10 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   grid-auto-rows: minmax(200px, 200px);
+
+  ${mobile} {
+    padding: 100px 25px;
+  }
 `;
 
 const Box1 = styled.div`
@@ -24,6 +29,10 @@ const Box1 = styled.div`
     width: 90%;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  ${mobile} {
+    display: none;
   }
 `;
 
@@ -43,6 +52,10 @@ const Box2 = styled.div`
     object-fit: cover;
     border-radius: 10px;
   }
+
+  ${mobile} {
+    display: none;
+  }
 `;
 
 const Box3 = styled.div`
@@ -60,6 +73,10 @@ const Box3 = styled.div`
     width: 90%;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  ${mobile} {
+    display: none;
   }
 `;
 
@@ -80,9 +97,17 @@ const Box4 = styled.div`
     object-fit: cover;
     border-radius: 15px;
   }
+  ${mobile} {
+    display: none;
+  }
 `;
 
 const Text = styled.div`
+  ${mobile} {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+
   background-color: var(--gold);
   border-radius: 10px;
   grid-column: 2 / 4;
@@ -102,12 +127,25 @@ const Text = styled.div`
       height: 90%;
       border-radius: 10px;
       background-color: var(--beige);
+
+      ${mobile} {
+        width: 90%;
+        height: 90%;
+      }
     }
 
     p {
       color: var(--darkgreen);
       padding: 10px 30px;
       font-weight: bold;
+
+      ${mobile} {
+        font-size: larger;
+      }
+
+      span {
+        color: var(--brown);
+      }
     }
   }
 `;
@@ -118,6 +156,10 @@ const Heading = styled.p`
   font-size: 30px;
   letter-spacing: 0.1rem;
   color: var(--darkgreen);
+
+  ${mobile} {
+    font-size: 20px !important;
+  }
 `;
 
 const Box5 = styled.div`
@@ -136,6 +178,10 @@ const Box5 = styled.div`
     object-fit: cover;
     border-radius: 10px;
   }
+
+  ${mobile} {
+    display: none;
+  }
 `;
 
 const Mail = styled.div`
@@ -143,6 +189,11 @@ const Mail = styled.div`
   border-radius: 10px;
   grid-column: 1 / 3;
   grid-row: 4;
+
+  ${mobile} {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
 
   div {
     width: 100%;
@@ -184,6 +235,10 @@ const Box6 = styled.div`
     object-fit: cover;
     border-radius: 10px;
   }
+
+  ${mobile} {
+    display: none;
+  }
 `;
 
 const Box7 = styled.div`
@@ -202,6 +257,10 @@ const Box7 = styled.div`
     width: 90%;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  ${mobile} {
+    display: none;
   }
 `;
 
@@ -235,12 +294,12 @@ export default function About() {
             <Heading>About</Heading>
             <p>
               WildHacks is Northwestern's overnight Hackathon taking place
-              in-person April 15-16 2023. As Northwestern's largest hackathon,
-              WildHacks is an opportunity for students to learn programming
-              skills and develop a final project in a collaborative and
-              inclusive environment. Through workshops, mentorship, and prizes,
-              WildHacks aims to be an inclusive event that welcomes students of
-              all skill levels, majors, and backgrounds.
+              in-person <span>April 15-16 2023</span>. As Northwestern's largest
+              hackathon, WildHacks is an opportunity for students to learn
+              programming skills and develop a final project in a collaborative
+              and inclusive environment. Through workshops, mentorship, and
+              prizes, WildHacks aims to be an inclusive event that welcomes
+              students of all skill levels, majors, and backgrounds.
             </p>
           </div>
         </div>

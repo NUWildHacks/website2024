@@ -2,6 +2,7 @@ import { instagram, linkedin } from '../variables';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
+import { mobile } from '../styles';
 
 const BeigeBook = styled.div`
   position: relative;
@@ -50,14 +51,26 @@ const BrownBook = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 60px;
   padding: 0 50px;
   background-color: var(--brown);
+  width: 100vw;
+
+  ${mobile} {
+    padding: 0 10px;
+  }
 `;
 
 const Left = styled.div`
   display: flex;
   align-items: center;
+
+  ${mobile} {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
 
   img {
     width: 60px;
@@ -65,18 +78,43 @@ const Left = styled.div`
     padding: 5px;
     background-color: var(--beige);
     border-radius: 10px;
+
+    ${mobile} {
+      float: left;
+      width: 40px;
+      margin-right: 5px;
+    }
   }
 
   p {
     font-weight: bold;
     font-size: 30px;
+
+    ${mobile} {
+      font-size: 20px;
+      white-space: nowrap;
+    }
   }
 `;
 
 const Right = styled.div`
   margin-bottom: 20px;
+
+  ${mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-right: 20px;
+  }
+
   & > a {
     font-size: 25px;
+
+    ${mobile} {
+      font-size: 15px;
+      margin-right: 5px;
+    }
   }
 `;
 
