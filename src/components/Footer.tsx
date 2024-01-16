@@ -10,6 +10,7 @@ const BeigeBook = styled.div`
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  margin-top: 80px;
 
   svg {
     position: relative;
@@ -27,6 +28,7 @@ const Beige = styled.div`
   background-color: var(--beige);
   height: 100px;
   margin-bottom: -130px;
+  margin-top: -2px;
 `;
 
 const BrownBook = styled.div`
@@ -59,6 +61,7 @@ const Container = styled.div`
 
   ${mobile} {
     padding: 0 10px;
+    margin-top: -2px;
   }
 `;
 
