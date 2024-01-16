@@ -78,7 +78,7 @@ const Box4 = styled.div`
     height: 95%;
     width: 90%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
   }
 `;
 
