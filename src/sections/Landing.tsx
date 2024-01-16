@@ -46,7 +46,10 @@ const Title = styled.h1`
   font-family: LinuxBiolinum;
   margin: 0px;
   text-align: center;
-  text-shadow: 0 0 10px #91a762, 0 0 20px #91a762, 0 0 30px #91a762,
+  text-shadow:
+    0 0 10px #91a762,
+    0 0 20px #91a762,
+    0 0 30px #91a762,
     0 0 40px #91a762;
 `;
 
