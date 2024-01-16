@@ -7,12 +7,13 @@ const NavBarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  height: 50px; /* Set the height of the navbar */
+  height: 50px;
 `;
 
 const Logo = styled.img`
   height: 60px;
   width: 60px;
+  margin-left: 10px;
 `;
 
 const NavLink = styled.a`
@@ -27,11 +28,10 @@ const Button = styled.button`
   border: none;
   padding: 10px 20px;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Rectangle */
-
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   &:hover {
     clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
-    background: var(--brown)
+    background: var(--brown);
   }
 
   a {
