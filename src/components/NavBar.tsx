@@ -7,7 +7,7 @@ const NavBarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  height: 50px; 
+  height: 50px;
 `;
 
 const Logo = styled.img`
@@ -28,7 +28,7 @@ const Button = styled.button`
   border: none;
   padding: 10px 20px;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   &:hover {
     clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
     background: var(--brown);
