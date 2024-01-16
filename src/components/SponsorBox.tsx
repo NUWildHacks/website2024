@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   // margin: 72px 16px;
+  margin-bottom: 2px;
 `;
 
 const Title = styled.h3`
