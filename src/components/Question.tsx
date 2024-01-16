@@ -7,7 +7,7 @@ import { Book, Book2 } from 'tabler-icons-react';
 
 const Container = styled.div<{ open: boolean }>`
   margin: 16px 0;
-  background: ${(props) => (props.open ? 'white' : '')};
+  background: ${(props) => (props.open ? 'var(--beige)' : '')};
   border-radius: 6px;
   padding: 3px;
 `;
@@ -16,7 +16,7 @@ const Heading = styled.button<{ open: boolean }>`
   display: flex;
   align-items: center;
   gap: 12px;
-  color: ${(props) => (props.open ? 'var(--darkgreen)' : 'white')};
+  color: ${(props) => (props.open ? 'var(--darkgreen)' : 'var(--beige)')};
   background: none;
   border: none;
   padding: 0;
@@ -52,7 +52,7 @@ const Heading = styled.button<{ open: boolean }>`
   }
 
   &:hover {
-    color: ${(props) => (props.open ? 'var(--lightgreen)' : '#b0d9ff')};
+    color: ${(props) => (props.open ? 'var(--lightgreen)' : 'var(--gold)')};
   }
 
   ${mobile} {

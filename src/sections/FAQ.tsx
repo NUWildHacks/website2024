@@ -56,6 +56,10 @@ const Boundary = styled.div<{ top: boolean }>`
   }
 `;
 
+const Email = styled.a`
+  color: var(--lightgreen);
+`;
+
 export default function FAQ() {
   return (
     <Section id="faq">
@@ -166,9 +170,9 @@ export default function FAQ() {
           <Question q="I'm interested in sponsoring WildHacks. Who should I contact?">
             Send us an email at{' '}
             <span>
-              <a href="mailto:wildhacks@northwestern.edu">
+              <Email href="mailto:wildhacks@northwestern.edu">
                 wildhacks@northwestern.edu
-              </a>
+              </Email>
             </span>
             ! We'd be happy to talk.
           </Question>

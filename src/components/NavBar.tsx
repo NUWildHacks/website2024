@@ -30,10 +30,29 @@ const Button = styled.button`
   color: var(--beige);
   background: var(--brown);
   border: none;
-  padding: 10px 20px;
+  padding: 5px 5px;
   margin-left: 20px;
   overflow: hidden;
   text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 0.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    width: 8px;
+    height: 30px;
+    background-color: var(--beige);
+    margin: 0 5px;
+    border-radius: 10px;
+  }
+
+  a {
+    padding: 0 10px;
+  }
 `;
 
 const List = styled.ul`
@@ -46,6 +65,11 @@ const List = styled.ul`
 
   & > a {
     padding-right: 20px;
+    letter-spacing: 0.1rem;
+
+    &:hover {
+      color: var(--gold);
+    }
   }
 `;
 
@@ -60,9 +84,11 @@ const Navbar: React.FC = () => {
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
         <Button>
+          <div></div>
           <a href={dashboard} target="_blank" rel="noopener noreferrer">
             Dashboard
           </a>
+          <div></div>
         </Button>
       </List>
     </NavBarContainer>
