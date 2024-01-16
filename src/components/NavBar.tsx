@@ -7,7 +7,7 @@ const NavBarContainer = styled.nav`
   background: var(--darkgreen);
   color: white;
   display: flex;
-  margin-left: 10px
+  margin-left: 10px;
   padding: 0 40px;
   height: 80px;
   position: sticky;
@@ -17,7 +17,7 @@ const NavBarContainer = styled.nav`
 
   ${mobile} {
     padding: 10px;
-
+  }
 `;
 
 const Logo = styled.img`
@@ -31,6 +31,7 @@ const Logo = styled.img`
     margin-top: 17px;
     margin-left: 0px;
     padding-right: 20px;
+  }
 `;
 
 const NavLink = styled.a`
@@ -68,11 +69,9 @@ const Button = styled.button`
     padding: 0 10px;
   }
   ${mobile} {
-    
     font-size: 20px;
-    
+  }
 `;
-
 
 const List = styled.ul`
   display: flex;
@@ -91,8 +90,6 @@ const List = styled.ul`
       color: var(--gold);
     }
   }
-   
-      
 `;
 
 const Navbar: React.FC = () => {
@@ -102,7 +99,6 @@ const Navbar: React.FC = () => {
         <Logo src={icon} alt="WildHacks 2024 Logo" />
       </NavLink>
       <List>
-        
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
