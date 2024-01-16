@@ -1,49 +1,80 @@
 import { useState, useRef, FormEvent, ChangeEvent } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 95%;
 `;
 
 const Name = styled.div`
+  width: 100%;
   display: flex;
+  flex-direction: row !important;
+  justify-content: space-between !important;
 `;
 
 const Input = styled.input`
-  background-color: #d9d9d9;
+  background-color: var(--lightgreenbackground);
   border: none;
   height: 40px;
+  width: 48%;
+  max-height: 50px;
   border-radius: 10px;
   color: var(--darkgreen);
   text-transform: lowercase;
-
-  padding-left: 20px;
-  /* width: 85%;
-  background-color: #d9d9d9;
-  border: none;
-  height: 50px;
-  border-radius: 10px;
-
-  color: var(--darkgreen);
-  padding-left: 20px;
-  text-transform: lowercase;
-  font-size: 15px;
+  padding-left: 10px !important;
 
   &::placeholder {
-    color: #9e9e9e;
+    color: var(--darkgreen);
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 15px;
+    font-size: 10px;
   }
 
   &:focus {
     outline-color: var(--lightgreen);
-  } */
+  }
+`;
+
+const Button = styled.button`
+  height: 40px;
+  width: 100%;
+  max-height: 50px;
+  border-radius: 10px;
+  background-color: var(--lightgreenbackground);
+  border: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px !important;
+  color: var(--darkgreen);
+
+  input {
+    width: 100%;
+    background-color: var(--lightgreenbackground);
+    border: none;
+    color: var(--darkgreen);
+    height: 100%;
+    padding-left: 10px;
+
+    &::placeholder {
+      color: var(--darkgreen);
+      text-decoration: underline;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 10px;
+    }
+
+    &:focus {
+      outline-color: var(--lightgreen);
+    }
+  }
 `;
 
 export default function MailingList() {
@@ -109,16 +140,20 @@ export default function MailingList() {
           required
         ></Input>
       </Name>
-      <Input
-        autoComplete="off"
-        placeholder="Email address here..."
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setEmail(e.target.value)
-        }
-        value={email}
-        required
-      ></Input>
-      {/* <FontAwesomeIcon icon={faPaperPlane} /> */}
+      <div>
+        <Button>
+          <input
+            autoComplete="off"
+            placeholder="Email address here..."
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+            value={email}
+            required
+          ></input>
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </Button>
+      </div>
     </Form>
   );
 }
