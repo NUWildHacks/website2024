@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import icon from '../assets/wildhacks2024-icon.png';
+// import icon from '../assets/wildhacks2024-icon.png';
 import { dashboard } from '../variables';
 import { mobile } from '../styles';
 
