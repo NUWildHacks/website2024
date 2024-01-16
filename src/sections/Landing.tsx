@@ -52,6 +52,10 @@ const Title = styled.h1`
     0 0 20px #91a762,
     0 0 30px #91a762,
     0 0 40px #91a762;
+
+  ${mobile} {
+    font-size: 50px; /* Apply mobile styles directly to Title */
+  }
 `;
 
 const DateLocation = styled.p`

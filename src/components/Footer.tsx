@@ -10,6 +10,7 @@ const BeigeBook = styled.div`
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  margin-top: 80px;
 
   svg {
     position: relative;
@@ -27,6 +28,7 @@ const Beige = styled.div`
   background-color: var(--beige);
   height: 100px;
   margin-bottom: -130px;
+  margin-top: -2px;
 `;
 
 const BrownBook = styled.div`
@@ -51,14 +53,16 @@ const BrownBook = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   min-height: 60px;
+  width: 100%;
   padding: 0 50px;
   background-color: var(--brown);
   width: 100vw;
 
   ${mobile} {
     padding: 0 10px;
+    margin-top: -2px;
   }
 `;
 
@@ -105,14 +109,13 @@ const Right = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    margin-right: 20px;
   }
 
   & > a {
     font-size: 25px;
 
     ${mobile} {
-      font-size: 15px;
+      font-size: 18px;
       margin-right: 5px;
     }
   }
@@ -130,9 +133,10 @@ const Socials = styled.div`
     & > * {
       font-size: 25px;
       text-align: center;
-    }
 
-    &:hover {
+      ${mobile} {
+        font-size: 35px;
+      }
     }
   }
 `;
