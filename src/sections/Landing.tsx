@@ -4,7 +4,6 @@ import { darken } from 'polished';
 import { FaLeaf } from 'react-icons/fa';
 import { mobile } from '../styles';
 
-
 interface BookProps {
   size: number;
   width: number;

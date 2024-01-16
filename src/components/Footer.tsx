@@ -82,6 +82,12 @@ const Left = styled.div`
     padding: 5px;
     background-color: var(--beige);
     border-radius: 10px;
+
+    ${mobile} {
+      float: left;
+      width: 40px;
+      margin-right: 5px;
+    }
   }
 
   p {

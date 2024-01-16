@@ -16,6 +16,7 @@ const Section = styled.div`
 const Container = styled.div`
   background-color: #ede6d8;
   padding: 45px 16px 75px;
+  margin: -1px;
 `;
 
 const Waveb = styled.div`
