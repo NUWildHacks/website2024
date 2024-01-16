@@ -56,7 +56,7 @@ const Container = styled.div`
   background-color: var(--brown);
 
   ${mobile} {
-    flex-direction: column
+    flex-direction: column;
   }
 `;
 

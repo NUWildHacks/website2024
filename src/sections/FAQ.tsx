@@ -72,8 +72,8 @@ export default function FAQ() {
             together to create cool software projects! You can expect{' '}
             <span>workshops</span>,
             <span>free food from Evanston restaurants</span>,{' '}
-            <span>fun social and de-stress events</span>, <span>free swag</span>,
-            and more!
+            <span>fun social and de-stress events</span>, <span>free swag</span>
+            , and more!
           </Question>
           <Question q="What if I've never coded before?">
             WildHacks is open to students of <span>all experience levels</span>!
@@ -95,8 +95,8 @@ export default function FAQ() {
           <Question q="What will I submit?">
             At the end of the hackathon, you'll submit your{' '}
             <span>project's source code</span>, a{' '}
-            <span>2-minute video pitch</span>, and any other relevant resources to
-            the WildHacks Dashboard. A more detailed rubric will be released
+            <span>2-minute video pitch</span>, and any other relevant resources
+            to the WildHacks Dashboard. A more detailed rubric will be released
             during kickoff.
           </Question>
         </Category>
@@ -112,11 +112,11 @@ export default function FAQ() {
             encourage you to work with others!
           </Question>
           <Question q="Are you required to have a team to register?">
-            <span>No, you are not required to register with a team</span>. At the
-            start of the event, if you don't already have a team in mind, you can
-            choose find a team to join or be randomly assigned to one. There will
-            be time during the event to find team members, but you can also find
-            members on the Discord server.
+            <span>No, you are not required to register with a team</span>. At
+            the start of the event, if you don't already have a team in mind,
+            you can choose find a team to join or be randomly assigned to one.
+            There will be time during the event to find team members, but you
+            can also find members on the Discord server.
           </Question>
         </Category>
         <Category>
@@ -138,8 +138,8 @@ export default function FAQ() {
           </Question>
           <Question q="Do we have to stay for the full 36 hours?">
             No, you are free to leave the event before the hackathon ends!
-            However, in order to claim prizes, you must be present at the closing
-            ceremony on Sunday, April 15 at 4:00 PM.
+            However, in order to claim prizes, you must be present at the
+            closing ceremony on Sunday, April 15 at 4:00 PM.
           </Question>
           <Question q="What are the tentative COVID protocols?">
             We strongly recommend masking during the event. If you're more
@@ -150,13 +150,14 @@ export default function FAQ() {
         <Category>
           <CategoryTitle>SUPPORT</CategoryTitle>
           <Question q="How can I get in touch?">
-            Send us an email at <span>
+            Send us an email at{' '}
+            <span>
               <a href="mailto:wildhacks@northwestern.edu">
                 wildhacks@northwestern.edu
               </a>
-            </span>! We'd be
-            happy to answer any questions about the event or steps to get
-            involved.
+            </span>
+            ! We'd be happy to answer any questions about the event or steps to
+            get involved.
           </Question>
           <Question q="I'm interested in sponsoring WildHacks. Who should I contact?">
             Send us an email at{' '}

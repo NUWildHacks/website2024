@@ -80,7 +80,7 @@ const Content = styled.p<{ open: boolean }>`
     color: var(--lightgreen);
     font-weight: 700;
   }
-  
+
   a {
     color: var(--lightgreen);
     font-weight: 700;
