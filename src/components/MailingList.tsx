@@ -79,11 +79,11 @@ export default function MailingList() {
       })
       .then((data) => {
         console.log(data);
-        setSuccess(data.success);
+        // setSuccess(data.success);
       })
       .catch((error) => {
         console.log(error);
-        setSuccess('error');
+        // setSuccess('error');
       });
   };
 
