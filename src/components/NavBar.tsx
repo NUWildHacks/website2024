@@ -1,28 +1,42 @@
 import styled from 'styled-components';
 import icon from '../assets/wildhacks2024-icon.png';
 import { dashboard } from '../variables';
+import { mobile } from '../styles';
 
 const NavBarContainer = styled.nav`
   background: var(--darkgreen);
   color: white;
   display: flex;
-  justify-content: space-between;
+  margin-left: 10px
   padding: 0 40px;
   height: 80px;
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 15px;
+
+  ${mobile} {
+    padding: 10px;
+
 `;
 
 const Logo = styled.img`
   height: 80px;
   width: 80px;
   margin-left: 10px;
+
+  ${mobile} {
+    height: 50px;
+    width: 50px;
+    margin-top: 17px;
+    margin-left: 0px;
+    padding-right: 20px;
 `;
 
 const NavLink = styled.a`
   color: var(--beige);
   font-family: 'GentiumBookPlus';
+  padding: 5px;
 `;
 
 const Button = styled.button`
@@ -40,7 +54,7 @@ const Button = styled.button`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   div {
     width: 8px;
@@ -53,10 +67,16 @@ const Button = styled.button`
   a {
     padding: 0 10px;
   }
+  ${mobile} {
+    
+    font-size: 20px;
+    
 `;
+
 
 const List = styled.ul`
   display: flex;
+  justify-content: space between;
   align-items: center;
   list-style-type: none;
   color: var(--beige);
@@ -71,6 +91,8 @@ const List = styled.ul`
       color: var(--gold);
     }
   }
+   
+      
 `;
 
 const Navbar: React.FC = () => {
@@ -80,6 +102,7 @@ const Navbar: React.FC = () => {
         <Logo src={icon} alt="WildHacks 2024 Logo" />
       </NavLink>
       <List>
+        
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
