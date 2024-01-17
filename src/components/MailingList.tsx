@@ -55,6 +55,10 @@ const Button = styled.button`
   padding: 0 10px !important;
   color: var(--darkgreen);
 
+  &:focus-within {
+    outline: 2px solid var(--lightgreen);
+  }
+
   input {
     width: 100%;
     background-color: var(--lightgreenbackground);
@@ -72,7 +76,7 @@ const Button = styled.button`
     }
 
     &:focus {
-      outline-color: var(--lightgreen);
+      outline: none;
     }
   }
 `;
