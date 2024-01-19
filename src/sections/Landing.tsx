@@ -43,7 +43,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 65px;
+  font-size: 96px;
   font-family: LinuxBiolinum;
   margin: 0px;
   text-align: center;
@@ -54,14 +54,18 @@ const Title = styled.h1`
     0 0 40px #91a762;
 
   ${mobile} {
-    font-size: 50px; /* Apply mobile styles directly to Title */
+    font-size: 40px; /* Apply mobile styles directly to Title */
   }
 `;
 
 const DateLocation = styled.p`
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 0px;
   text-align: center;
+
+  ${mobile} {
+    font-size: 24px;
+  }
 `;
 
 const Bookshelf = styled.div`
