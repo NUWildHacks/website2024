@@ -269,19 +269,19 @@ export default function About() {
     <Container id="about">
       <Box1>
         <img
-          src="src/assets/WildhacksClass.JPG"
+          src="src/assets/wildhacks-class.jpg"
           alt="WildHacks 2023 Open Classes Picture"
         ></img>
       </Box1>
       <Box2>
         <img
-          src="src/assets/WildhacksGroup.JPG"
+          src="src/assets/wildhacks-group.jpg"
           alt="WildHacks 2023 Group Picture"
         ></img>
       </Box2>
       <Box3>
         <img
-          src="src/assets/WildhacksOutside.JPG"
+          src="src/assets/wildhacks-outside.JPG"
           alt="WildHacks 2023 Team Outside Working Picture"
         ></img>
       </Box3>
@@ -291,7 +291,6 @@ export default function About() {
       <Text>
         <div>
           <div>
-            <Heading>About</Heading>
             <p>
               WildHacks is Northwestern's overnight Hackathon taking place
               in-person <span>April 15-16 2023</span>. As Northwestern's largest
@@ -306,7 +305,7 @@ export default function About() {
       </Text>
       <Box5>
         <img
-          src="src/assets/WildhacksFood.JPG"
+          src="src/assets/wildhacks-food.JPG"
           alt="WildHacks 2023 Food Catering Picture"
         ></img>
       </Box5>
@@ -320,13 +319,13 @@ export default function About() {
       </Mail>
       <Box6>
         <img
-          src="src/assets/WildhacksTeamPose.JPG"
+          src="src/assets/wildhacks-team-pose.JPG"
           alt="WildHacks 2023 Executive Team Picture"
         ></img>
       </Box6>
       <Box7>
         <img
-          src="src/assets/WildhacksTeamwork.JPG"
+          src="src/assets/wildhacks-teamwork.JPG"
           alt="WildHacks 2023 Team Working Picture"
         ></img>
       </Box7>
