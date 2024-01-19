@@ -139,18 +139,6 @@ const Text = styled.div`
   }
 `;
 
-const Heading = styled.p`
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  color: var(--darkgreen);
-
-  ${mobile} {
-    font-size: 20px !important;
-  }
-`;
-
 const Box5 = styled.div`
   border-radius: 8px;
   grid-column: 1;
@@ -174,6 +162,7 @@ const Box5 = styled.div`
 
 const Mail = styled.div`
   background-color: var(--lightgreen);
+  display: flex;
   border-radius: 8px;
   grid-column: 1 / 3;
   grid-row: 4;
@@ -182,28 +171,30 @@ const Mail = styled.div`
     grid-column: 1 / 5;
     grid-row: 4 / 5;
   }
+`;
 
-  div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+const MailContent = styled.div`
+  border-radius: 8px;
+  width: 100%;
+  margin: 8px;
+  background-color: var(--beige);
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
-    div {
-      width: 95%;
-      height: 85%;
-      border-radius: 8px;
-      background-color: var(--beige);
-      display: flex;
-      align-items: start;
-      justify-content: space-evenly;
+const MailHeading = styled.p`
+  font-size: 28px;
+  letter-spacing: 0.1rem;
+  color: var(--darkgreen);
+  font-family: GentiumBookPlus;
+  margin: 8px 0;
+  width: 100%;
 
-      & > * {
-        padding-left: 30px;
-      }
-    }
+  ${mobile} {
+    font-size: 20px;
   }
 `;
 
@@ -295,12 +286,10 @@ export default function About() {
         ></img>
       </Box5>
       <Mail>
-        <div>
-          <div>
-            <Heading>Sign up for mailing list:</Heading>
-            <MailingList />
-          </div>
-        </div>
+        <MailContent>
+          <MailHeading>Join the mailing list!</MailHeading>
+          <MailingList />
+        </MailContent>
       </Mail>
       <Box6>
         <img
