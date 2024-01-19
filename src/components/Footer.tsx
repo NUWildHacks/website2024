@@ -53,16 +53,16 @@ const BrownBook = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   min-height: 60px;
   width: 100%;
-  padding: 0 50px;
+  padding: 32px 48px;
   background-color: var(--brown);
   width: 100vw;
 
   ${mobile} {
-    padding: 0 10px;
     margin-top: -2px;
+    flex-direction: column;
   }
 `;
 
@@ -72,16 +72,16 @@ const Left = styled.div`
 
   ${mobile} {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
   }
 
   img {
     width: 60px;
     margin-right: 20px;
-    padding: 5px;
+    padding: 4px;
     background-color: var(--beige);
-    border-radius: 10px;
+    border-radius: 4px;
 
     ${mobile} {
       float: left;
@@ -92,51 +92,52 @@ const Left = styled.div`
 
   p {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 32px;
 
     ${mobile} {
-      font-size: 20px;
+      font-size: 24px;
       white-space: nowrap;
     }
   }
 `;
 
 const Right = styled.div`
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 
-  ${mobile} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+  a {
+    font-size: 24px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
-  & > a {
-    font-size: 25px;
-
-    ${mobile} {
-      font-size: 18px;
-      margin-right: 5px;
-    }
+  ${mobile} {
+    align-items: center;
   }
 `;
 
 const Socials = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   a {
-    float: right;
     background-color: var(--beige);
     color: var(--brown);
-    border-radius: 20%;
+    border-radius: 4px;
     padding: 3px;
     margin: 5px;
+    display: flex;
 
-    & > * {
-      font-size: 25px;
-      text-align: center;
+    font-size: 32px;
+    text-align: center;
 
-      ${mobile} {
-        font-size: 35px;
-      }
+    &:hover {
+      opacity: 0.8;
     }
   }
 `;
@@ -172,11 +173,11 @@ export default function Footer() {
         </Left>
         <Right>
           <Socials>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} size="xl" />
-            </a>
             <a href={instagram} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="xl" />
+              <FontAwesomeIcon icon={faInstagram} size="1x" />
+            </a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} size="1x" />
             </a>
           </Socials>
           <a href="mailto:wildhacks@northwestern.edu">
