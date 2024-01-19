@@ -37,7 +37,7 @@ const Logo = styled.img`
 
 const NavLink = styled.a`
   color: var(--beige);
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ const ButtonContent = styled.span`
   display: flex;
   align-items: center;
   transition: transform 150ms ease-in-out;
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
 
   p {
     padding: 0 8px;

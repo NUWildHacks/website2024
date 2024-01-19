@@ -44,7 +44,8 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 96px;
-  font-family: LinuxBiolinum;
+  font-family: GentiumBookPlus;
+  letter-spacing: 4px;
   margin: 0px;
   text-align: center;
   text-shadow:

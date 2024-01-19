@@ -10,7 +10,7 @@
 
   --lightgreenbackground: #ccd5ae;
 
-  font-family: 'LinuxBiolinum', 'GentiumBookPlus', sans-serif;
+  font-family: LinuxBiolinum, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -38,20 +38,20 @@ a {
 
 /* Gentium Book Plus */
 @font-face {
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
   src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Regular.ttf')
     format('truetype');
 }
 
 @font-face {
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
   src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
   src: url('/fonts/GentiumBookPlus/GentiumBookPlus-Italic.ttf')
     format('truetype');
   font-style: italic;
@@ -59,7 +59,7 @@ a {
 }
 
 @font-face {
-  font-family: 'GentiumBookPlus';
+  font-family: GentiumBookPlus;
   src: url('/fonts/GentiumBookPlus/GentiumBookPlus-BoldItalic.ttf')
     format('truetype');
   font-style: italic;
@@ -68,19 +68,19 @@ a {
 
 /* Linux Biolinum */
 @font-face {
-  font-family: 'LinuxBiolinum';
+  font-family: LinuxBiolinum;
   src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'LinuxBiolinum';
+  font-family: LinuxBiolinum;
   src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Bold.otf') format('opentype');
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'LinuxBiolinum';
+  font-family: LinuxBiolinum;
   src: url('/fonts/LinuxBiolinum/LinuxBiolinum-Italic.otf') format('opentype');
   font-style: italic;
   font-weight: normal;

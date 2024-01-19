@@ -5,14 +5,13 @@ const Container = styled.div`
   margin-bottom: 2px;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   text-align: left;
   padding-top: 0px;
   padding-left: 10px;
-  // padding-right: 10px;
-  // padding-bottom: 10px;
   font-size: 32px;
   color: var(--brown);
+  font-family: GentiumBookPlus;
 `;
 
 const Content = styled.div`
