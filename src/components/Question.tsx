@@ -28,7 +28,7 @@ const Heading = styled.button<{ open: boolean }>`
   cursor: pointer;
   text-align: left;
   transition: color 150ms ease-in-out;
-  font-family: 'LinuxBiolinum';
+  font-family: GentiumBookPlus;
 
   svg {
     width: 28px;
@@ -48,7 +48,7 @@ const Heading = styled.button<{ open: boolean }>`
       margin-top: 1px;
       height: 4px;
       background-color: ${(props) =>
-        props.open ? 'var(--lightgreen)' : '#b0d9ff'};
+        props.open ? 'var(--lightgreen)' : 'var(--lightgreen)'};
       transform: scaleX(${(props) => (props.open ? 1 : 0)});
       transition: transform 250ms ease-out;
       transform-origin: ${(props) => (props.open ? '0% 50%' : '100% 50%')};
@@ -76,13 +76,14 @@ const Content = styled.p<{ open: boolean }>`
   margin-left: 32px;
   font-size: 18px;
   color: ${(props) => (props.open ? 'black' : 'white')};
+  font-family: LinuxBiolinum;
 
   ${mobile} {
     margin-left: 28px;
   }
 
   span {
-    color: var(--lightgreen);
+    color: var(--darkgreen);
     font-weight: 700;
   }
 `;
