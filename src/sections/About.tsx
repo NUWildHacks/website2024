@@ -15,20 +15,19 @@ const Container = styled.div`
 `;
 
 const Box1 = styled.div`
-  background-color: var(--gold);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 1;
   grid-row: 1 / 3;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   img {
-    height: 95%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -37,20 +36,19 @@ const Box1 = styled.div`
 `;
 
 const Box2 = styled.div`
-  background-color: var(--beige);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 2;
   grid-row: 1;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -59,20 +57,19 @@ const Box2 = styled.div`
 `;
 
 const Box3 = styled.div`
-  background-color: var(--red);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 3;
   grid-row: 1;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -82,20 +79,19 @@ const Box3 = styled.div`
 
 const Box4 = styled.div`
   background-color: var(--gold);
-  border-radius: 10px;
-  margin-bottom: -30px;
+  border-radius: 8px;
   grid-column: 4;
   grid-row: 1 / 3;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
     height: 95%;
     width: 90%;
     object-fit: cover;
-    border-radius: 15px;
   }
   ${mobile} {
     display: none;
@@ -108,8 +104,7 @@ const Text = styled.div`
     grid-row: 1 / 4;
   }
 
-  background-color: var(--gold);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 2 / 4;
   grid-row: 2 / 4;
 
@@ -123,21 +118,14 @@ const Text = styled.div`
     text-align: center;
 
     div {
-      width: 95%;
-      height: 90%;
-      border-radius: 10px;
+      border-radius: 8px;
       background-color: var(--beige);
-
-      ${mobile} {
-        width: 90%;
-        height: 90%;
-      }
     }
 
     p {
       color: var(--darkgreen);
-      padding: 10px 30px;
-      font-weight: bold;
+      padding: 8px 30px;
+      font-size: 18px;
 
       ${mobile} {
         font-size: larger;
@@ -145,6 +133,7 @@ const Text = styled.div`
 
       span {
         color: var(--brown);
+        font-weight: bold;
       }
     }
   }
@@ -163,20 +152,19 @@ const Heading = styled.p`
 `;
 
 const Box5 = styled.div`
-  background-color: var(--beige);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 1;
   grid-row: 3;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -186,7 +174,7 @@ const Box5 = styled.div`
 
 const Mail = styled.div`
   background-color: var(--lightgreen);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 1 / 3;
   grid-row: 4;
 
@@ -206,7 +194,7 @@ const Mail = styled.div`
     div {
       width: 95%;
       height: 85%;
-      border-radius: 10px;
+      border-radius: 8px;
       background-color: var(--beige);
       display: flex;
       align-items: start;
@@ -220,20 +208,19 @@ const Mail = styled.div`
 `;
 
 const Box6 = styled.div`
-  background-color: var(--gold);
-  border-radius: 10px;
+  border-radius: 8px;
   grid-column: 3;
   grid-row: 4;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -242,21 +229,19 @@ const Box6 = styled.div`
 `;
 
 const Box7 = styled.div`
-  background-color: var(--gold);
-  border-radius: 10px;
-  margin-top: 30px;
+  border-radius: 8px;
   grid-column: 4;
   grid-row: 3 / 5;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   img {
-    height: 93%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   ${mobile} {
@@ -292,8 +277,8 @@ export default function About() {
         <div>
           <div>
             <p>
-              WildHacks is Northwestern's overnight Hackathon taking place
-              in-person <span>April 15-16 2023</span>. As Northwestern's largest
+              WildHacks is Northwestern's overnight hackathon taking place
+              in-person <span>April 5-7 2024</span>. As Northwestern's largest
               hackathon, WildHacks is an opportunity for students to learn
               programming skills and develop a final project in a collaborative
               and inclusive environment. Through workshops, mentorship, and
