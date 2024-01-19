@@ -1,91 +1,103 @@
-import { useState, useRef, FormEvent, ChangeEvent } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FormEvent, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 const Form = styled.form`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  margin: 8px 0;
+  gap: 16px;
+  width: 100%;
 `;
 
-const Name = styled.div`
+const Row = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row !important;
-  justify-content: space-between !important;
+  flex-direction: row;
+  gap: 16px;
 `;
 
 const Input = styled.input`
   background-color: var(--lightgreenbackground);
   border: none;
-  height: 40px;
-  width: 48%;
-  max-height: 50px;
-  border-radius: 10px;
+  border-radius: 8px;
   color: var(--darkgreen);
-  text-transform: lowercase;
-  padding-left: 10px !important;
+  padding: 12px;
+  flex: 1;
+  font-family: LinuxBiolinum;
+  font-size: 16px;
 
   &::placeholder {
     color: var(--darkgreen);
-    text-decoration: underline;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    outline: 2px solid var(--lightgreen);
   }
 
   &:focus {
-    outline-color: var(--lightgreen);
+    outline: 2px solid var(--darkgreen);
   }
 `;
 
 const Button = styled.button`
-  height: 40px;
-  width: 100%;
-  max-height: 50px;
-  border-radius: 10px;
-  background-color: var(--lightgreenbackground);
+  flex: 25%;
   border: none;
-  margin-top: 10px;
+  background: var(--lightgreen);
+  border-radius: 8px;
+  color: var(--beige);
+  font-weight: bold;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 10px !important;
+  justify-content: center;
+  gap: 8px;
+  font-family: LinuxBiolinum;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background: var(--darkgreen);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background: var(--lightgreen);
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+const Email = styled(Input)`
+  flex: 75%;
+`;
+
+const Success = styled.p`
   color: var(--darkgreen);
+  flex: 1;
+  text-align: center;
+`;
 
-  &:focus-within {
-    outline: 2px solid var(--lightgreen);
-  }
-
-  input {
-    width: 100%;
-    background-color: var(--lightgreenbackground);
-    border: none;
-    color: var(--darkgreen);
-    height: 100%;
-    padding-left: 10px;
-
-    &::placeholder {
-      color: var(--darkgreen);
-      text-decoration: underline;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      font-size: 10px;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
+const Error = styled.p`
+  color: red;
+  flex: 1;
+  text-align: center;
 `;
 
 export default function MailingList() {
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [email, setEmail] = useState('');
-  //   const [success, setSuccess] = useState('');
+  const [state, setState] = useState<'idle' | 'loading' | 'success' | 'error'>(
+    'idle'
+  );
 
   const api = 'https://api.dilanxd.com/wildhacks/subscribe';
   const form = useRef<HTMLFormElement>(null);
@@ -98,6 +110,7 @@ export default function MailingList() {
 
   const subscribe = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setState('loading');
 
     const requestOptions = {
       method: 'POST',
@@ -106,58 +119,63 @@ export default function MailingList() {
     };
 
     fetch(api, requestOptions)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // setSuccess(data.success);
+        setState(data.success ? 'success' : 'error');
       })
       .catch((error) => {
         console.log(error);
-        // setSuccess('error');
+        setState('error');
       });
   };
 
   return (
-    <Form ref={form} onSubmit={subscribe}>
-      <Name>
-        <Input
-          autoComplete="off"
-          placeholder="First name here..."
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setFirst(e.target.value)
-          }
-          value={first}
-          required
-        ></Input>
-        <Input
-          autoComplete="off"
-          placeholder="Last name here..."
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setLast(e.target.value)
-          }
-          value={last}
-          required
-        ></Input>
-      </Name>
-      <div>
-        <Button>
-          <input
-            autoComplete="off"
-            placeholder="Email address here..."
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
-            value={email}
-            required
-          ></input>
-          <FontAwesomeIcon icon={faPaperPlane} />
-        </Button>
-      </div>
-    </Form>
+    <>
+      {state === 'success' ? (
+        <Success>
+          You've successfully joined the WildHacks mailing list! We'll be in
+          touch soon.
+        </Success>
+      ) : state === 'error' ? (
+        <Error>
+          Something went wrong when trying to join the mailing list. You may
+          already be subscribed! If you believe you are not, please contact us
+          at wildhacks@northwestern.edu.
+        </Error>
+      ) : (
+        <Form ref={form} onSubmit={subscribe}>
+          <Row>
+            <Input
+              autoComplete="off"
+              placeholder="first name"
+              onChange={(e) => setFirst(e.target.value)}
+              value={first}
+              required
+            />
+            <Input
+              autoComplete="off"
+              placeholder="last name"
+              onChange={(e) => setLast(e.target.value)}
+              value={last}
+              required
+            />
+          </Row>
+          <Row>
+            <Email
+              autoComplete="off"
+              placeholder="email address"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
+            />
+            <Button type="submit" disabled={state === 'loading'}>
+              <FontAwesomeIcon icon={faPaperPlane} />
+              <span>{state === 'loading' ? 'Joining...' : 'Join'}</span>
+            </Button>
+          </Row>
+        </Form>
+      )}
+    </>
   );
 }
