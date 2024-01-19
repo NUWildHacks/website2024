@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import icon from '../assets/wildhacks2024-icon.png';
+import icon from '../assets/wildhacks2024.svg';
 import { dashboard } from '../variables';
 import { mobile } from '../styles';
 
@@ -7,45 +7,49 @@ const NavBarContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--darkgreen);
+  background: var(--darkgreentranslucent);
   color: var(--beige);
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
   height: 80px;
-  padding: 0 15px;
+  padding: 0 16px;
 
   ${mobile} {
-    padding: 5px;
-    height: 60px;
+    height: 48px;
   }
 `;
 
-// const Logo = styled.img`
-//   height: 80px;
-//   width: 80px;
-//   margin-left: 10px;
+const Logo = styled.img`
+  height: 64px;
+  width: 64px;
+  margin-left: 10px;
 
-//   ${mobile} {
-//     height: 50px;
-//     width: 50px;
-//     margin-top: 17px;
-//     margin-left: 0px;
-//     padding-right: 20px;
-//   }
-// `;
+  ${mobile} {
+    height: 48px;
+    width: 48px;
+  }
+`;
 
 const NavLink = styled.a`
   color: var(--beige);
   font-family: 'GentiumBookPlus';
   padding: 5px;
+  display: flex;
+  align-items: center;
 
-  ${mobile} {
-    padding: 0;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: var(--gold);
   }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   ${mobile} {
     display: none;
   }
@@ -54,78 +58,81 @@ const Button = styled.button`
   color: var(--beige);
   background: var(--brown);
   border: none;
-  padding: 5px 5px;
-  margin-left: 20px;
-  overflow: hidden;
+  margin-left: 18px;
+  padding: 0;
   text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 10px;
-  letter-spacing: 0.1rem;
+  border-radius: 12px;
 
+  --translate: -4px;
+
+  &:hover {
+    --translate: -6px;
+  }
+
+  &:active {
+    --translate: -2px;
+  }
+`;
+
+const ButtonContent = styled.span`
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #9f7c5b;
+  transform: translateY(var(--translate));
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  transition: transform 150ms ease-in-out;
+  font-family: 'GentiumBookPlus';
 
-  div {
-    width: 8px;
-    height: 30px;
-    background-color: var(--beige);
-    margin: 0 5px;
-    border-radius: 10px;
+  p {
+    padding: 0 8px;
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+    font-weight: 700;
   }
+`;
 
-  a {
-    padding: 0 10px;
-
-    ${mobile} {
-      padding: 0 5px;
-    }
-  }
-
-  ${mobile} {
-    font-size: 10px;
-  }
+const ButtonSide = styled.span`
+  width: 8px;
+  height: 24px;
+  background-color: var(--beige);
+  margin: 0 5px;
+  border-radius: 10px;
 `;
 
 const List = styled.ul`
   display: flex;
-  justify-content: space between;
+  justify-content: flex-end;
   align-items: center;
   list-style-type: none;
   color: var(--beige);
   margin: 0;
   text-transform: uppercase;
+  gap: 20px;
+  font-weight: 700;
+  margin-right: 128px;
 
-  & > a {
-    padding-right: 20px;
-    ${mobile} {
-      padding-right: 10px;
-    }
-    letter-spacing: 0.1rem;
-
-    &:hover {
-      color: var(--gold);
-    }
+  ${mobile} {
+    display: none;
   }
 `;
 
 const Navbar: React.FC = () => {
   return (
     <NavBarContainer>
-      {/* <NavLink href="#landing">
+      <NavLink href="#landing">
         <Logo src={icon} alt="WildHacks 2024 Logo" />
-      </NavLink> */}
+      </NavLink>
       <List>
-        <NavLink href="#landing">WildHacks</NavLink>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
-        <Button>
-          <div></div>
-          <a href={dashboard} target="_blank" rel="noopener noreferrer">
-            Dashboard
-          </a>
-          <div></div>
+        <Button href={dashboard} target="_blank" rel="noreferrer">
+          <ButtonContent>
+            <ButtonSide />
+            <p>Dashboard</p>
+            <ButtonSide />
+          </ButtonContent>
         </Button>
       </List>
     </NavBarContainer>
