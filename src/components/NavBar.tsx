@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import icon from '../assets/wildhacks2024.svg';
 import { dashboard } from '../variables';
 import { mobile } from '../styles';
+import Button from './Button';
 
 const NavBarContainer = styled.nav`
   position: sticky;
@@ -49,57 +50,6 @@ const NavLink = styled.a`
   }
 `;
 
-const Button = styled.a`
-  ${mobile} {
-    display: none;
-  }
-
-  position: relative;
-  color: var(--beige);
-  background: var(--brown);
-  border: none;
-  margin-left: 18px;
-  padding: 0;
-  text-transform: uppercase;
-  border-radius: 12px;
-
-  --translate: -4px;
-
-  &:hover {
-    --translate: -6px;
-  }
-
-  &:active {
-    --translate: -2px;
-  }
-`;
-
-const ButtonContent = styled.span`
-  padding: 8px 12px;
-  border-radius: 12px;
-  background: #9f7c5b;
-  transform: translateY(var(--translate));
-  display: flex;
-  align-items: center;
-  transition: transform 150ms ease-in-out;
-  font-family: GentiumBookPlus;
-
-  p {
-    padding: 0 8px;
-    letter-spacing: 0.1rem;
-    font-size: 16px;
-    font-weight: 700;
-  }
-`;
-
-const ButtonSide = styled.span`
-  width: 8px;
-  height: 24px;
-  background-color: var(--beige);
-  margin: 0 5px;
-  border-radius: 10px;
-`;
-
 const List = styled.ul`
   display: flex;
   justify-content: flex-end;
@@ -127,12 +77,8 @@ const Navbar: React.FC = () => {
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
-        <Button href={dashboard} target="_blank" rel="noreferrer">
-          <ButtonContent>
-            <ButtonSide />
-            <p>Dashboard</p>
-            <ButtonSide />
-          </ButtonContent>
+        <Button href={dashboard} color="#9f7c5b" shadowColor="#654221">
+          Dashboard
         </Button>
       </List>
     </NavBarContainer>

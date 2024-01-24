@@ -1,7 +1,8 @@
-import styled from 'styled-components';
-import wood from '../assets/wood.png';
 import { darken } from 'polished';
 import { FaLeaf } from 'react-icons/fa';
+import styled from 'styled-components';
+import wood from '../assets/wood.png';
+import RegistrationBanner from '../components/RegistrationBanner';
 import { mobile } from '../styles';
 
 interface BookProps {
@@ -196,6 +197,7 @@ export const Landing: React.FC = () => {
 
       <DateLocation>April 5 - 7 2024 in Evanston, IL</DateLocation>
       <Title>WILDHACKS 2024</Title>
+      <RegistrationBanner />
 
       <Bookshelf></Bookshelf>
     </Container>
