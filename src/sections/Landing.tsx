@@ -128,7 +128,7 @@ const Book = styled.div<BookProps>`
     top: 0;
     bottom: 0;
     width: 5px; // The width of the spine
-    background-color: ${({ color }) => darken(0.2, color)};
+    background-color: ${({ color }) => darken(0.1, color)};
     border-radius: 5px 0 0 5px;
   }
 `;
