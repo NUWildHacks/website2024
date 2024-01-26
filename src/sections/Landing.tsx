@@ -1,7 +1,7 @@
 import { darken } from 'polished';
 import { FaLeaf } from 'react-icons/fa';
 import styled from 'styled-components';
-import wood from '../assets/wood.png';
+import wood from '../assets/landing/wood.png';
 import RegistrationBanner from '../components/RegistrationBanner';
 import { mobile } from '../styles';
 

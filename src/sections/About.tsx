@@ -1,11 +1,11 @@
 import MailingList from '../components/MailingList';
-import wildhacksClass from '../assets/wildhacks-class.jpg';
-import wildhacksGroup from '../assets/wildhacks-group.jpg';
-import wildhacksOutside from '../assets/wildhacks-outside.jpg';
-import bookshelf from '../assets/bookshelf.png';
-import wildhacksFood from '../assets/wildhacks-food.jpg';
-import wildhacksTeamPose from '../assets/wildhacks-team-pose.jpg';
-import wildhacksTeamwork from '../assets/wildhacks-teamwork.jpg';
+import wildhacksClass from '../assets/about/wildhacks-class.jpg';
+import wildhacksGroup from '../assets/about/wildhacks-group.jpg';
+import wildhacksOutside from '../assets/about/wildhacks-outside.jpg';
+import bookshelf from '../assets/about/bookshelf.png';
+import wildhacksFood from '../assets/about/wildhacks-food.jpg';
+import wildhacksTeamPose from '../assets/about/wildhacks-team-pose.jpg';
+import wildhacksTeamwork from '../assets/about/wildhacks-teamwork.jpg';
 import { mobile } from '../styles';
 import styled from 'styled-components';
 
