@@ -45,7 +45,6 @@ export default function RegistrationBanner() {
       <Button
         href="https://dashboard.wildhacks.net/register"
         color="#8b0101"
-        shadowColor="#4c0000"
         style={{
           boxShadow: 'rgba(203, 69, 72, 1) 0px -4px 32px',
         }}

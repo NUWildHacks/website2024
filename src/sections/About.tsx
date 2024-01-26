@@ -1,4 +1,11 @@
 import MailingList from '../components/MailingList';
+import wildhacksClass from '../assets/about/wildhacks-class.jpg';
+import wildhacksGroup from '../assets/about/wildhacks-group.jpg';
+import wildhacksOutside from '../assets/about/wildhacks-outside.jpg';
+import bookshelf from '../assets/about/bookshelf.png';
+import wildhacksFood from '../assets/about/wildhacks-food.jpg';
+import wildhacksTeamPose from '../assets/about/wildhacks-team-pose.jpg';
+import wildhacksTeamwork from '../assets/about/wildhacks-teamwork.jpg';
 import { mobile } from '../styles';
 import styled from 'styled-components';
 
@@ -245,24 +252,21 @@ export default function About() {
     <Container id="about">
       <Box1>
         <img
-          src="src/assets/wildhacks-class.jpg"
+          src={wildhacksClass}
           alt="WildHacks 2023 Open Classes Picture"
         ></img>
       </Box1>
       <Box2>
-        <img
-          src="src/assets/wildhacks-group.jpg"
-          alt="WildHacks 2023 Group Picture"
-        ></img>
+        <img src={wildhacksGroup} alt="WildHacks 2023 Group Picture"></img>
       </Box2>
       <Box3>
         <img
-          src="src/assets/wildhacks-outside.JPG"
+          src={wildhacksOutside}
           alt="WildHacks 2023 Team Outside Working Picture"
         ></img>
       </Box3>
       <Box4>
-        <img src="src/assets/bokshelf.png" alt="Bookshelf cartoon image"></img>
+        <img src={bookshelf} alt="Bookshelf cartoon image"></img>
       </Box4>
       <Text>
         <div>
@@ -281,7 +285,7 @@ export default function About() {
       </Text>
       <Box5>
         <img
-          src="src/assets/wildhacks-food.JPG"
+          src={wildhacksFood}
           alt="WildHacks 2023 Food Catering Picture"
         ></img>
       </Box5>
@@ -293,13 +297,13 @@ export default function About() {
       </Mail>
       <Box6>
         <img
-          src="src/assets/wildhacks-team-pose.JPG"
+          src={wildhacksTeamPose}
           alt="WildHacks 2023 Executive Team Picture"
         ></img>
       </Box6>
       <Box7>
         <img
-          src="src/assets/wildhacks-teamwork.JPG"
+          src={wildhacksTeamwork}
           alt="WildHacks 2023 Team Working Picture"
         ></img>
       </Box7>

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 /* ${mobile} {
     display: none;
   } */
-const Container = styled.a<{ shadowColor: string }>`
+const Container = styled.a<{ color: string }>`
   position: relative;
   color: var(--beige);
-  background: ${(props) => props.shadowColor};
+  background: ${(props) => props.color};
   border: none;
   padding: 0;
   text-transform: uppercase;
@@ -52,20 +53,13 @@ interface ButtonProps {
   href: string;
   children?: React.ReactNode;
   color: string;
-  shadowColor: string;
   style?: React.CSSProperties;
 }
 
-export default function Button({
-  href,
-  children,
-  color,
-  shadowColor,
-  style,
-}: ButtonProps) {
+export default function Button({ href, children, color, style }: ButtonProps) {
   return (
     <Container
-      shadowColor={shadowColor}
+      color={darken(0.1, color)}
       href={href}
       style={style}
       target="_blank"

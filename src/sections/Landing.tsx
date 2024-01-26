@@ -1,7 +1,7 @@
 import { darken } from 'polished';
 import { FaLeaf } from 'react-icons/fa';
 import styled from 'styled-components';
-import wood from '../assets/wood.png';
+import wood from '../assets/landing/wood.png';
 import RegistrationBanner from '../components/RegistrationBanner';
 import { mobile } from '../styles';
 
@@ -128,7 +128,7 @@ const Book = styled.div<BookProps>`
     top: 0;
     bottom: 0;
     width: 5px; // The width of the spine
-    background-color: ${({ color }) => darken(0.2, color)};
+    background-color: ${({ color }) => darken(0.1, color)};
     border-radius: 5px 0 0 5px;
   }
 `;

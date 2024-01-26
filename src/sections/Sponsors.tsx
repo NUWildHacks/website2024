@@ -1,13 +1,9 @@
+import styled from 'styled-components';
 import SponsorBox from '../components/SponsorBox';
 import Sponsor from '../components/Sponsor';
-import imc from '../assets/imc.png';
-import nucs from '../assets/northwestern-cs.png';
-import deloitte from '../assets/deloitte.png';
-import spiderrock from '../assets/spiderrock.png';
-import poatek from '../assets/poatek.png';
-import garage from '../assets/thegarage.jpeg';
-import github from '../assets/github.png';
-import styled from 'styled-components';
+import logoAccenture from '../assets/sponsors/accenture.png';
+import logoDeloitte from '../assets/sponsors/deloitte.png';
+import logoTheGarage from '../assets/sponsors/the-garage.png';
 
 const Section = styled.div`
   padding-top: 100px;
@@ -77,34 +73,23 @@ export default function Sponsors() {
       </Waveb>
       <Container>
         <SponsorBox title="OUR SPONSORS">
-          <Sponsor src={imc} alt="IMC" href="https://www.imc.com/us/" />
           <Sponsor
-            src={nucs}
-            alt="Northwestern Computer Science"
-            href="https://www.mccormick.northwestern.edu/computer-science/"
+            src={logoAccenture}
+            alt="Accenture"
+            href="https://www.accenture.com/us-en"
+            h={128}
           />
           <Sponsor
-            src={deloitte}
+            src={logoDeloitte}
             alt="Deloitte"
             href="https://www2.deloitte.com/us/en.html"
+            h={64}
           />
           <Sponsor
-            src={spiderrock}
-            alt="SpiderRock"
-            href="https://www.spiderrock.net/"
-          />
-          <Sponsor src={poatek} alt="POATEK" href="https://poatek.com/" />
-          <Sponsor
-            src={garage}
+            src={logoTheGarage}
             alt="The Garage"
-            href="https://thegarage.northwestern.edu/"
-            // h={128}
-          />
-          <Sponsor
-            src={github}
-            alt="GitHub"
-            href="https://github.com/"
-            // h={48}
+            href="https://www.thegarage.northwestern.edu/"
+            h={128}
           />
         </SponsorBox>
       </Container>
