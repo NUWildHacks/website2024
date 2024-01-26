@@ -1,13 +1,5 @@
-import SponsorBox from '../components/SponsorBox';
-import Sponsor from '../components/Sponsor';
-import imc from '../assets/imc.png';
-import nucs from '../assets/northwestern-cs.png';
-import deloitte from '../assets/deloitte.png';
-import spiderrock from '../assets/spiderrock.png';
-import poatek from '../assets/poatek.png';
-import garage from '../assets/thegarage.jpeg';
-import github from '../assets/github.png';
 import styled from 'styled-components';
+import SponsorBox from '../components/SponsorBox';
 
 const Section = styled.div`
   padding-top: 100px;
@@ -77,7 +69,7 @@ export default function Sponsors() {
       </Waveb>
       <Container>
         <SponsorBox title="OUR SPONSORS">
-          <Sponsor src={imc} alt="IMC" href="https://www.imc.com/us/" />
+          {/* <Sponsor src={imc} alt="IMC" href="https://www.imc.com/us/" />
           <Sponsor
             src={nucs}
             alt="Northwestern Computer Science"
@@ -105,7 +97,7 @@ export default function Sponsors() {
             alt="GitHub"
             href="https://github.com/"
             // h={48}
-          />
+          /> */}
         </SponsorBox>
       </Container>
       <Wavet>
