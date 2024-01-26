@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         <NavLink href="#about">About</NavLink>
         <NavLink href="#sponsors">Sponsors</NavLink>
         <NavLink href="#faq">FAQ</NavLink>
-        <Button href={dashboard} color="#9f7c5b" shadowColor="#654221">
+        <Button href={dashboard} color="#654221">
           Dashboard
         </Button>
       </List>
