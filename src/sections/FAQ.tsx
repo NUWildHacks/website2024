@@ -77,6 +77,13 @@ export default function FAQ() {
           Workshop Night will take place at <span>5:00 PM</span> on{' '}
           <span>Friday, April 5, 2024</span>.
         </Question>
+        <Question q="What will I build?">
+          We'll release a set of tracks at the start of the event, and your
+          project must be related to one of them. The tracks will be broad
+          enough to give you some creative freedom in what you develop but
+          specific enough to give you some direction and prevent members from
+          submitting things developed outside of the hackathon period.
+        </Question>
         <Question q="What will I submit?">
           At the end of the hackathon, you'll submit your project's{' '}
           <span>source code</span>, a <span>2-minute video pitch</span>, and any
