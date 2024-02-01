@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SponsorBox from '../components/SponsorBox';
 import Sponsor from '../components/Sponsor';
+import logoNUCS from '../assets/sponsors/nucs.png';
 import logoAccenture from '../assets/sponsors/accenture.png';
 import logoDeloitte from '../assets/sponsors/deloitte.png';
 import logoTheGarage from '../assets/sponsors/the-garage.png';
@@ -73,6 +74,12 @@ export default function Sponsors() {
       </Waveb>
       <Container>
         <SponsorBox title="OUR SPONSORS">
+          <Sponsor
+            src={logoNUCS}
+            alt="NUCS"
+            href="https://www.accenture.com/us-en"
+            h={72}
+          />
           <Sponsor
             src={logoAccenture}
             alt="Accenture"
