@@ -36,20 +36,23 @@ export default function RegistrationBanner() {
   return (
     <Container>
       <TextContent>
-        <Title>🎉 Registration is now open! 🎉</Title>
+        <Title>🧑‍💻 Registration is closed. 🧑‍💻</Title>
         <Text>
-          Register for WildHacks 2024 before registration closes on{' '}
-          <span>Wednesday, February 7, 2024</span>!
+          Registration for WildHacks is no longer open. If you have any
+          questions at all, reach out to{' '}
+          <a href="test">wildhacks@northwestern.edu</a>.
         </Text>
       </TextContent>
       <Button
         href="https://dashboard.wildhacks.net/register"
-        color="#8b0101"
-        style={{
-          boxShadow: 'rgba(203, 69, 72, 1) 0px -4px 32px',
-        }}
+        //color="#8b0101"
+        disabled
+        color="#646464"
+        // style={{
+        //   boxShadow: 'rgba(203, 69, 72, 1) 0px -4px 32px',
+        // }}
       >
-        Register
+        Registration Closed
       </Button>
     </Container>
   );
