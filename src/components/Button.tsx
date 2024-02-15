@@ -3,7 +3,7 @@ import { darken } from 'polished';
 /* ${mobile} {
     display: none;
   } */
-const Container = styled.a<{ color: string }>`
+const Container = styled.a<{ color: string; $disabled?: boolean }>`
   position: relative;
   color: var(--beige);
   background: ${(props) => props.color};
@@ -21,6 +21,12 @@ const Container = styled.a<{ color: string }>`
   &:active {
     --translate: -2px;
   }
+
+  ${({ $disabled }) =>
+    $disabled &&
+    `
+    pointer-events: none;
+  `}
 `;
 
 const ButtonContent = styled.span<{ color: string }>`
@@ -54,13 +60,21 @@ interface ButtonProps {
   children?: React.ReactNode;
   color: string;
   style?: React.CSSProperties;
+  disabled?: boolean;
 }
 
-export default function Button({ href, children, color, style }: ButtonProps) {
+export default function Button({
+  href,
+  children,
+  color,
+  style,
+  disabled,
+}: ButtonProps) {
   return (
     <Container
       color={darken(0.1, color)}
-      href={href}
+      $disabled={disabled}
+      href={disabled ? 'javascript:void(0)' : href}
       style={style}
       target="_blank"
       rel="noreferrer"
