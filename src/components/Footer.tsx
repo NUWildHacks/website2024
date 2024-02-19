@@ -173,10 +173,10 @@ export default function Footer() {
         </Left>
         <Right>
           <Socials>
-            <a href={instagram} target="_blank" rel="noopener noreferrer">
+            <a href={instagram} title="Instagram" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} size="1x" />
             </a>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <a href={linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} size="1x" />
             </a>
           </Socials>
