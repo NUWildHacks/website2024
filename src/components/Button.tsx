@@ -16,6 +16,7 @@ const Container = styled.a<{ color: string; $disabled?: boolean }>`
 
   &:hover {
     --translate: -6px;
+    text-decoration: none;
   }
 
   &:active {

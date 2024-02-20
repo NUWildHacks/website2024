@@ -47,6 +47,7 @@ const NavLink = styled.a`
 
   &:hover {
     color: var(--gold);
+    text-decoration: none;
   }
 `;
 
