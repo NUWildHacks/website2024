@@ -51,6 +51,7 @@ Error generating stack: `+a.message+`
 
   &:hover {
     --translate: -6px;
+    text-decoration: none;
   }
 
   &:active {
@@ -121,6 +122,7 @@ Error generating stack: `+a.message+`
 
   &:hover {
     color: var(--gold);
+    text-decoration: none;
   }
 `,iy=N.ul`
   display: flex;
