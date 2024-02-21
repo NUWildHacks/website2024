@@ -5,6 +5,7 @@ import Sponsors from './sections/Sponsors';
 import Footer from './components/Footer';
 import Landing from './sections/Landing';
 import styled from 'styled-components';
+import Theme from './sections/Theme';
 
 const Container = styled.div`
   max-width: 100%;
@@ -20,6 +21,7 @@ function App() {
       <Container>
         <Landing />
         <About />
+        <Theme />
         <Sponsors />
         <FAQ />
         <Footer />
