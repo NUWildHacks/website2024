@@ -49,7 +49,7 @@ const Button = styled.button`
   border: none;
   background: var(--lightgreen);
   border-radius: 8px;
-  color: var(--beige);
+  color: var(--darkgreen);
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -58,10 +58,13 @@ const Button = styled.button`
   font-family: LinuxBiolinum;
   font-size: 16px;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 
   &:hover,
   &:active {
     background: var(--darkgreen);
+    color: var(--beige);
+    transition: all 200ms ease-in-out;
   }
 
   &:active {
