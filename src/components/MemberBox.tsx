@@ -54,12 +54,7 @@ export const MemberBox: React.FC<IMemberBox> = ({ title, children }) => {
     <Container>
       <TitleContainer>
         <FontContainer>
-          <FontAwesomeIcon
-            icon={faBookmark}
-            size="2x"
-            color="var(--red)"
-            margin="50px"
-          />
+          <FontAwesomeIcon icon={faBookmark} size="2x" color="var(--red)" />
         </FontContainer>
         <Title>{title}</Title>
       </TitleContainer>
