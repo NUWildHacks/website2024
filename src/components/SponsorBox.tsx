@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   // margin: 72px 16px;
-  margin-bottom: 2px;
+  max-width: 1200px;
+  margin: 32px auto;
 `;
 
-const Title = styled.h2`
-  text-align: left;
+const Title = styled.h2<{ $small?: boolean }>`
+  text-align: center;
   padding-top: 0px;
   padding-left: 10px;
-  font-size: 32px;
+  font-size: ${({ $small }) => ($small ? '24px' : '32px')};
   color: var(--brown);
   font-family: GentiumBookPlus;
 `;
@@ -27,13 +28,18 @@ const Content = styled.div`
 
 interface ISponsorBox {
   title: string;
+  small?: boolean;
   children: React.ReactNode;
 }
 
-export const SponsorBox: React.FC<ISponsorBox> = ({ title, children }) => {
+export const SponsorBox: React.FC<ISponsorBox> = ({
+  title,
+  small,
+  children,
+}) => {
   return (
     <Container>
-      <Title>{title}</Title>
+      <Title $small={small}>{title}</Title>
       <Content>{children}</Content>
     </Container>
   );

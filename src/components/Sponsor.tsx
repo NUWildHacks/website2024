@@ -24,14 +24,14 @@ const Container = styled.a<{ h?: number }>`
 interface ISponsor {
   href: string;
   src: string;
-  alt: string;
+  title: string;
   h?: number;
 }
 
-export const Sponsor: React.FC<ISponsor> = ({ href, src, alt, h }) => {
+export const Sponsor: React.FC<ISponsor> = ({ href, src, title, h }) => {
   return (
-    <Container href={href} target="_blank" rel="noreferrer" h={h}>
-      <img src={src} alt={alt} />
+    <Container href={href} target="_blank" rel="noreferrer" h={h} title={title}>
+      <img src={src} alt={title} />
     </Container>
   );
 };

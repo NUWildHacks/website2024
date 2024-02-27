@@ -4,7 +4,10 @@ import Sponsor from '../components/Sponsor';
 import logoNUCS from '../assets/sponsors/nucs.png';
 import logoAccenture from '../assets/sponsors/accenture.png';
 import logoDeloitte from '../assets/sponsors/deloitte.png';
+import logoCapitalOne from '../assets/sponsors/capital-one.png';
+import logoCallForCode from '../assets/sponsors/call-for-code.png';
 import logoTheGarage from '../assets/sponsors/the-garage.png';
+import logoStandoutStickers from '../assets/partners/standout-stickers.png';
 
 const Section = styled.div`
   padding-top: 100px;
@@ -13,7 +16,6 @@ const Section = styled.div`
 const Container = styled.div`
   background-color: #ede6d8;
   padding: 45px 16px 75px;
-  margin: -1px;
 `;
 
 const Waveb = styled.div`
@@ -73,29 +75,49 @@ export default function Sponsors() {
         </svg>
       </Waveb>
       <Container>
-        <SponsorBox title="OUR SPONSORS">
+        <SponsorBox title="A SPECIAL THANKS TO OUR SPONSORS">
           <Sponsor
             src={logoNUCS}
-            alt="NUCS"
-            href="https://www.accenture.com/us-en"
-            h={72}
-          />
-          <Sponsor
-            src={logoAccenture}
-            alt="Accenture"
-            href="https://www.accenture.com/us-en"
-            h={128}
-          />
-          <Sponsor
-            src={logoDeloitte}
-            alt="Deloitte"
-            href="https://www2.deloitte.com/us/en.html"
+            title="NUCS"
+            href="https://www.mccormick.northwestern.edu/computer-science/"
             h={64}
           />
           <Sponsor
+            src={logoAccenture}
+            title="Accenture"
+            href="https://www.accenture.com/us-en"
+            h={108}
+          />
+          <Sponsor
+            src={logoDeloitte}
+            title="Deloitte"
+            href="https://www2.deloitte.com/us/en.html"
+            h={48}
+          />
+          <Sponsor
+            src={logoCapitalOne}
+            title="Capital One"
+            href="https://www.capitalone.com/"
+            h={72}
+          />
+          <Sponsor
+            src={logoCallForCode}
+            title="Call for Code at IBM"
+            href="https://callforcode.org/"
+            h={128}
+          />
+          <Sponsor
             src={logoTheGarage}
-            alt="The Garage"
+            title="The Garage"
             href="https://www.thegarage.northwestern.edu/"
+            h={128}
+          />
+        </SponsorBox>
+        <SponsorBox title="AND OUR PARTNERS" small>
+          <Sponsor
+            src={logoStandoutStickers}
+            title="StandOut Stickers"
+            href="http://hackp.ac/mlh-StandOutStickers-hackathons"
             h={128}
           />
         </SponsorBox>
