@@ -1518,7 +1518,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   span {
     font-weight: 700;
   }
-`;function _x(){return p.jsxs(Ex,{children:[p.jsxs(Cx,{children:[p.jsx(Px,{children:"🧑‍💻 Registration is closed. 🧑‍💻"}),p.jsxs(jx,{children:["Registration for WildHacks is no longer open. If you have any questions at all, reach out to"," ",p.jsx("a",{href:"test",children:"wildhacks@northwestern.edu"}),"."]})]}),p.jsx(ih,{href:"https://dashboard.wildhacks.net/register",disabled:!0,color:"#646464",children:"Registration Closed"})]})}const Ox=N.div`
+`;function _x(){return p.jsxs(Ex,{children:[p.jsxs(Cx,{children:[p.jsx(Px,{children:"🧑‍💻 Registration closes TONIGHT, Feb 29. 🧑‍💻"}),p.jsx(jx,{children:"Don't miss out on this final opportunity!"})]}),p.jsx(ih,{href:"https://dashboard.wildhacks.net/register",color:"#8b0101",style:{boxShadow:"rgba(203, 69, 72, 1) 0px -4px 32px"},children:"Register"})]})}const Ox=N.div`
   min-height: 750px;
   margin-top: 0px;
   position: relative;
