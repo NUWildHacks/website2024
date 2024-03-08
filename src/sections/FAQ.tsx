@@ -120,7 +120,8 @@ export default function FAQ() {
       <Category>
         <CategoryTitle>LOGISTICS</CategoryTitle>
         <Question q="Will there be sleeping / showering accommodations?">
-          There will be a room reserved overnight dedicated to sleeping.
+          There will be a room reserved overnight dedicated to sleeping on
+          Saturday night only. Friday night will not have this accommodation.
           However, we recommend bringing pillows and blankets. There are showers
           at Mudd Library, and we'll provide toiletries (shower gel, shampoo,
           and conditioner), but we recommend bringing your own towel. However,
