@@ -1,3 +1,4 @@
 # https://github.com/dilanx/generate-redirects
+/test https://www.dilanxd.com
 /mentor-registration https://docs.google.com/forms/d/e/1FAIpQLSeGgH7VS6hE7993W7M52xva3TkE1zUv2n2X6RWqH1WbE2gR-A/viewform?usp=sf_link
 /judge-registration https://docs.google.com/forms/d/e/1FAIpQLSd2s67axxBzQM4nNB_WmjKo3rlISiOHXu0lSZpuMzvIyw_lsQ/viewform?usp=sf_link
