@@ -21,6 +21,8 @@ jobs:
         run: npm run build
       - name: Generate redirects
         uses: dilanx/generate-redirects@v1
+        with:
+          destination-directory: ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
