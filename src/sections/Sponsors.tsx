@@ -7,6 +7,7 @@ import logoDeloitte from '../assets/sponsors/deloitte.png';
 import logoCapitalOne from '../assets/sponsors/capital-one.png';
 import logoCallForCode from '../assets/sponsors/call-for-code.png';
 import logoTheGarage from '../assets/sponsors/the-garage.png';
+import logoCocaCola from '../assets/partners/coca-cola.png';
 import logoStandoutStickers from '../assets/partners/standout-stickers.png';
 
 const Section = styled.div`
@@ -114,6 +115,12 @@ export default function Sponsors() {
           />
         </SponsorBox>
         <SponsorBox title="AND OUR PARTNERS" small>
+          <Sponsor
+            src={logoCocaCola}
+            title="Coca-Cola"
+            href="https://www.coca-cola.com/us/en"
+            h={64}
+          />
           <Sponsor
             src={logoStandoutStickers}
             title="StandOut Stickers"
