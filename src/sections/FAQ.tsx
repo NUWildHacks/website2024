@@ -123,9 +123,9 @@ export default function FAQ() {
           There will be a room reserved overnight dedicated to sleeping on
           Saturday night only. Friday night will not have this accommodation.
           However, we recommend bringing pillows and blankets. There are showers
-          at Mudd Library, and we'll provide toiletries (shower gel, shampoo,
-          and conditioner), but we recommend bringing your own towel. However,
-          you're welcome to come to and go from the event as you please.
+          at Mudd Library, so make sure to bring shower gel, shampoo, a towel,
+          and other things you might need. However, you're welcome to come to
+          and go from the event as you please.
         </Question>
         <Question q="Will transportation be reimbursed?">
           Unfortunately, transportation will not be reimbursed.
