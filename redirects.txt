@@ -3,3 +3,5 @@
 /judge-registration https://docs.google.com/forms/d/e/1FAIpQLSd2s67axxBzQM4nNB_WmjKo3rlISiOHXu0lSZpuMzvIyw_lsQ/viewform?usp=sf_link
 /discord https://discord.gg/EB6FGJ3pWX
 /opening-ceremony https://docs.google.com/presentation/d/1oNgB8MTW3JgXmM35xxDKcDPyqs5QDqAALCivj0bS_9Y/edit?usp=sharing
+/crowd-favorite-registration https://forms.gle/KvQk4kPi7AeAVhG4A
+/crowd-favorite-voting https://forms.gle/toXNZ5Pm7Q92a2Qc7
