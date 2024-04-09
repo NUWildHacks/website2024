@@ -1,7 +1,3 @@
 # https://github.com/dilanx/generate-redirects
-/mentor-registration https://docs.google.com/forms/d/e/1FAIpQLSeGgH7VS6hE7993W7M52xva3TkE1zUv2n2X6RWqH1WbE2gR-A/viewform?usp=sf_link
-/judge-registration https://docs.google.com/forms/d/e/1FAIpQLSd2s67axxBzQM4nNB_WmjKo3rlISiOHXu0lSZpuMzvIyw_lsQ/viewform?usp=sf_link
 /discord https://discord.gg/EB6FGJ3pWX
-/opening-ceremony https://docs.google.com/presentation/d/1oNgB8MTW3JgXmM35xxDKcDPyqs5QDqAALCivj0bS_9Y/edit?usp=sharing
-/crowd-favorite-registration https://forms.gle/KvQk4kPi7AeAVhG4A
-/crowd-favorite-voting https://forms.gle/toXNZ5Pm7Q92a2Qc7
+/feedback https://forms.gle/9i8JM9frPhHD6eG16
