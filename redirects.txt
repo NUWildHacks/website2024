@@ -1,3 +1,4 @@
 # https://github.com/dilanx/generate-redirects
 /discord https://discord.gg/EB6FGJ3pWX
-/feedback https://forms.gle/9i8JM9frPhHD6eG16
+/2024-feedback https://forms.gle/9i8JM9frPhHD6eG16
+/2024-photos https://majorleaguehacking.smugmug.com/Event-Photos/WildHacks-s2024/n-5xrcTb
