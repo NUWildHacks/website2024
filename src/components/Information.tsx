@@ -32,28 +32,23 @@ const Text = styled.p`
   }
 `;
 
-export default function RegistrationBanner() {
+export default function Information() {
   return (
     <Container>
       <TextContent>
-        <Title>🧑‍💻 Registration is closed. 🧑‍💻</Title>
-        <Text>
-          Unfortunately, registration for WildHacks 2024 has closed. Reach out
-          to wildhacks@northwestern.edu with any questions.
-        </Text>
+        <Title>🧑‍💻 WildHacks 2024 is done. 🧑‍💻</Title>
+        <Text>Check out projects made this year!</Text>
       </TextContent>
       <Button
-        href="https://dashboard.wildhacks.net/register"
-        // color="#8b0101"
-        disabled
-        color="#646464"
-        style={
-          {
-            // boxShadow: 'rgba(203, 69, 72, 1) 0px -4px 32px',
-          }
-        }
+        href="https://wildhacks2024.devpost.com"
+        color="#8b0101"
+        // disabled
+        // color="#646464"
+        style={{
+          boxShadow: 'rgba(203, 69, 72, 1) 0px -4px 32px',
+        }}
       >
-        Register
+        Projects built at WildHacks 2024
       </Button>
     </Container>
   );

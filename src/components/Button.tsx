@@ -45,6 +45,7 @@ const ButtonContent = styled.span<{ color: string }>`
     letter-spacing: 0.1rem;
     font-size: 16px;
     font-weight: 700;
+    text-align: center;
   }
 `;
 
