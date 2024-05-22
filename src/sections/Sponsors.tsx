@@ -4,7 +4,6 @@ import Sponsor from '../components/Sponsor';
 import logoNUCS from '../assets/sponsors/nucs.png';
 import logoAccenture from '../assets/sponsors/accenture.png';
 import logoCapitalOne from '../assets/sponsors/capital-one.png';
-import logoCodecrafters from '../assets/sponsors/codecrafters.png';
 import logoDeloitte from '../assets/sponsors/deloitte.png';
 import logoCallForCode from '../assets/sponsors/call-for-code.png';
 import logoTheGarage from '../assets/sponsors/the-garage.png';
@@ -96,12 +95,6 @@ export default function Sponsors() {
             title="Capital One"
             href="https://www.capitalone.com/"
             h={72}
-          />
-          <Sponsor
-            src={logoCodecrafters}
-            title="CodeCrafters.io"
-            href="https://codecrafters.io/event/wildhacks"
-            h={48}
           />
           <Sponsor
             src={logoDeloitte}
