@@ -195,8 +195,8 @@ export const Landing: React.FC = () => {
         <Shelf width={400} rightPosition={-90}></Shelf>
       </BookContainer>
 
-      <DateLocation>April 5 - 7 2024 in Evanston, IL</DateLocation>
-      <Title>WILDHACKS 2024</Title>
+      <DateLocation>April 4 - 6 2025 in Evanston, IL</DateLocation>
+      <Title>WILDHACKS 2025</Title>
       <Information />
 
       <Bookshelf></Bookshelf>

@@ -36,8 +36,8 @@ export default function Information() {
   return (
     <Container>
       <TextContent>
-        <Title>🧑‍💻 WildHacks 2024 is done. 🧑‍💻</Title>
-        <Text>Check out projects made this year!</Text>
+        <Title>🧑‍💻 WildHacks 2025 is coming soon! 🧑‍💻</Title>
+        <Text>Check out projects made last year...</Text>
       </TextContent>
       <Button
         href="https://wildhacks2024.devpost.com"
