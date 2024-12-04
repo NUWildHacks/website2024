@@ -2,6 +2,7 @@ import Navbar from './components/NavBar';
 import About from './sections/About';
 import FAQ from './sections/FAQ';
 import Sponsors from './sections/Sponsors';
+import Team from './sections/Team';
 import Footer from './components/Footer';
 import Landing from './sections/Landing';
 import styled from 'styled-components';
@@ -22,6 +23,7 @@ function App() {
         <About />
         <Sponsors />
         <FAQ />
+        <Team />
         <Footer />
       </Container>
     </>
